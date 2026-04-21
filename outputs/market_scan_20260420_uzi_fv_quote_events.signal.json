@@ -1,0 +1,6095 @@
+{
+  "as_of": "2026-04-21",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "300476.SZ",
+      "300750.SZ",
+      "601138.SH",
+      "601899.SH",
+      "000977.SZ",
+      "002475.SZ",
+      "000988.SZ",
+      "300502.SZ",
+      "688256.SH",
+      "002281.SZ",
+      "300308.SZ",
+      "300394.SZ",
+      "000657.SZ",
+      "002384.SZ",
+      "601869.SH",
+      "002428.SZ",
+      "002463.SZ",
+      "300274.SZ",
+      "600105.SH",
+      "002371.SZ",
+      "600487.SH",
+      "600879.SH",
+      "603986.SH",
+      "688525.SH",
+      "300058.SZ",
+      "002837.SZ",
+      "300136.SZ",
+      "300857.SZ",
+      "603083.SH",
+      "000547.SZ"
+    ],
+    "filters": {
+      "exclude_st": true,
+      "min_amount": 1000000000.0,
+      "source": "tencent.qt.gtimg.cn",
+      "fallback_path": [
+        "eastmoney_push2_failed",
+        "xueqiu_failed",
+        "tencent_used"
+      ]
+    },
+    "stocks": [
+      {
+        "symbol": "300476.SZ",
+        "name": "胜宏科技",
+        "current_price": 327.05
+      },
+      {
+        "symbol": "300750.SZ",
+        "name": "宁德时代",
+        "current_price": 436.45
+      },
+      {
+        "symbol": "601138.SH",
+        "name": "工业富联",
+        "current_price": 60.45
+      },
+      {
+        "symbol": "601899.SH",
+        "name": "紫金矿业",
+        "current_price": 35.05
+      },
+      {
+        "symbol": "000977.SZ",
+        "name": "浪潮信息",
+        "current_price": 68.78
+      },
+      {
+        "symbol": "002475.SZ",
+        "name": "立讯精密",
+        "current_price": 63.3
+      },
+      {
+        "symbol": "000988.SZ",
+        "name": "华工科技",
+        "current_price": 113.42
+      },
+      {
+        "symbol": "300502.SZ",
+        "name": "新易盛",
+        "current_price": 571.02
+      },
+      {
+        "symbol": "688256.SH",
+        "name": "寒武纪",
+        "current_price": 1329.0
+      },
+      {
+        "symbol": "002281.SZ",
+        "name": "光迅科技",
+        "current_price": 117.1
+      },
+      {
+        "symbol": "300308.SZ",
+        "name": "中际旭创",
+        "current_price": 848.01
+      },
+      {
+        "symbol": "300394.SZ",
+        "name": "天孚通信",
+        "current_price": 356.5
+      },
+      {
+        "symbol": "000657.SZ",
+        "name": "中钨高新",
+        "current_price": 58.05
+      },
+      {
+        "symbol": "002384.SZ",
+        "name": "东山精密",
+        "current_price": 161.19
+      },
+      {
+        "symbol": "601869.SH",
+        "name": "长飞光纤",
+        "current_price": 371.76
+      },
+      {
+        "symbol": "002428.SZ",
+        "name": "云南锗业",
+        "current_price": 68.48
+      },
+      {
+        "symbol": "002463.SZ",
+        "name": "沪电股份",
+        "current_price": 97.63
+      },
+      {
+        "symbol": "300274.SZ",
+        "name": "阳光电源",
+        "current_price": 134.36
+      },
+      {
+        "symbol": "600105.SH",
+        "name": "永鼎股份",
+        "current_price": 40.22
+      },
+      {
+        "symbol": "002371.SZ",
+        "name": "北方华创",
+        "current_price": 450.8
+      },
+      {
+        "symbol": "600487.SH",
+        "name": "亨通光电",
+        "current_price": 58.28
+      },
+      {
+        "symbol": "600879.SH",
+        "name": "航天电子",
+        "current_price": 25.22
+      },
+      {
+        "symbol": "603986.SH",
+        "name": "兆易创新",
+        "current_price": 302.01
+      },
+      {
+        "symbol": "688525.SH",
+        "name": "佰维存储",
+        "current_price": 268.8
+      },
+      {
+        "symbol": "300058.SZ",
+        "name": "蓝色光标",
+        "current_price": 18.69
+      },
+      {
+        "symbol": "002837.SZ",
+        "name": "英维克",
+        "current_price": 108.97
+      },
+      {
+        "symbol": "300136.SZ",
+        "name": "信维通信",
+        "current_price": 77.61
+      },
+      {
+        "symbol": "300857.SZ",
+        "name": "协创数据",
+        "current_price": 300.22
+      },
+      {
+        "symbol": "603083.SH",
+        "name": "剑桥科技",
+        "current_price": 150.47
+      },
+      {
+        "symbol": "000547.SZ",
+        "name": "航天发展",
+        "current_price": 27.9
+      }
+    ]
+  },
+  "summary": {
+    "market_view": "东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 与 UZI-Skill 的 K 线 fallback 链，未使用 sqlite 缓存；成功 30 只，失败 0 只。 已尝试使用 AkShare 补充基本面字段和近三年估值分位；基本面成功 26 只，估值成功 30 只。 已使用腾讯实时行情补充候选股票当前价格；成功覆盖 30 只股票。 已尝试使用巨潮资讯补充近 90 天公告/事件数据；成功覆盖 30 只股票。",
+    "candidate_count": 30,
+    "risk_level": "high",
+    "style_bias": [
+      "流动性",
+      "备源行情初筛"
+    ]
+  },
+  "results": [
+    {
+      "symbol": "300476.SZ",
+      "name": "胜宏科技",
+      "industry": "",
+      "current_price": 327.05,
+      "rating": "关注",
+      "total_score": 78.88,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 100,
+        "fundamental_quality": 86,
+        "valuation": 38,
+        "event": 64,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "国信证券股份有限公司关于胜宏科技（惠州）股份有限公司向特定对象发行股票限售股份解除限售并上市流通的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225128779.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "关于向特定对象发行股票解除限售并上市流通的提示性公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225128778.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "关于境外上市外资股（H股）公开发行价格的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225114862.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "关于刊发H股招股说明书、H股发行价格上限及H股香港公开发售等事宜的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225097032.PDF"
+        },
+        {
+          "date": "2026-04-09",
+          "title": "2025年年度分红派息实施公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225091227.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "君合律师事务所上海分所关于胜宏科技（惠州）股份有限公司2025年度股东会之法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225079869.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "2025年度股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225079868.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "关于完成工商变更登记并换发营业执照的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225078240.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "327.05"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "23.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "103.94 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "66.18"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "25.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "79.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "273.5%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "86.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "18.01"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "92.4%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 327.05，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 103.94 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "low",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "current_price": 436.45,
+      "rating": "关注",
+      "total_score": 76.97,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 50,
+        "event": 68,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-20",
+          "title": "股东询价转让定价情况提示性公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225128872.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "中信建投证券股份有限公司关于宁德时代新能源科技股份有限公司股东向特定机构投资者询价转让股份相关资格的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225123059.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "股东询价转让计划书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225123058.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "中国国际金融股份有限公司关于宁德时代新能源科技股份有限公司股东向特定机构投资者询价转让股份相关资格的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225123060.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "上海市通力律师事务所关于宁德时代新能源科技股份有限公司调整股权激励计划及员工持股计划相关价格的法律意见书",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107949.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "第四届董事会第十五次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107948.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "2026年一季度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107946.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "关于调整股权激励计划及员工持股计划相关价格的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107945.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "436.45"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "4.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "143.47 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "25.22"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.8%"
+        },
+        {
+          "name": "营收同比",
+          "value": "52.4%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "53.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "74.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.53"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "85.2%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 436.45，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 143.47 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "low",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601138.SH",
+      "name": "工业富联",
+      "industry": "",
+      "current_price": 60.45,
+      "rating": "观察",
+      "total_score": 73.38,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 64,
+        "valuation": 50,
+        "event": 64,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-09",
+          "title": "富士康工业互联网股份有限公司关于召开2025年年度业绩说明会的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225083956.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "富士康工业互联网股份有限公司关于股份回购实施结果暨股份变动的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225057717.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "富士康工业互联网股份有限公司2025年度财务报表及审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004423.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "中国国际金融股份有限公司关于富士康工业互联网股份有限公司2025年度募集资金存放与使用情况的专项核查报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004422.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "富士康工业互联网股份有限公司关于2026年度日常关联交易预计的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004421.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "富士康工业互联网股份有限公司2025年年度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004420.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "富士康工业互联网股份有限公司关于开展外汇衍生品交易的可行性分析报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004419.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "富士康工业互联网股份有限公司2025年度内部控制审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225004418.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "60.45"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "88.54 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "34.00"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "21.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "48.2%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "51.9%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "82.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "7.32"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "88.2%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 60.45，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 88.54 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "",
+      "current_price": 35.05,
+      "rating": "观察",
+      "total_score": 72.88,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 68,
+        "fundamental_quality": 86,
+        "valuation": 50,
+        "event": 76,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-15",
+          "title": "紫金矿业集团股份有限公司关于回购股份实施结果暨股份变动的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225102175.PDF"
+        },
+        {
+          "date": "2026-04-04",
+          "title": "中信证券股份有限公司关于紫金矿业集团股份有限公司分拆所属子公司紫金黄金国际有限公司境外上市之持续督导核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-04/1225078771.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "紫金矿业集团股份有限公司关于以集中竞价交易方式回购公司A股股份的进展公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225075988.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "紫金矿业集团股份有限公司关于2023年股票期权激励计划第一个行权期自主行权完毕暨股份变动公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225075985.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "紫金矿业H股市场公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225071936.PDF"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "紫金矿业集团股份有限公司关于回购A股股份事项前十名股东和前十名无限售条件股东持股情况的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-25/1225027508.PDF"
+        },
+        {
+          "date": "2026-03-24",
+          "title": "紫金矿业集团股份有限公司关于以集中竞价交易方式首次回购公司A股股份的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-24/1225025170.PDF"
+        },
+        {
+          "date": "2026-03-23",
+          "title": "紫金矿业集团股份有限公司关于拟通过协议收购A股和认购定向增发H股的方式获得赤峰吉隆黄金矿业股份有限公司控制权的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-23/1225024230.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "35.05"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "10.0%"
+        },
+        {
+          "name": "20日均额",
+          "value": "92.43 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "18.00"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "27.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "15.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "62.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "65.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.03"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "89.7%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 35.05，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 92.43 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录 PE-TTM 快照约 18.00，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "价格尚未站上60日均线，中期趋势仍未确认。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "",
+      "current_price": 68.78,
+      "rating": "观察",
+      "total_score": 72.33,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 64,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-11",
+          "title": "2025年度董事会工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096668.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "关于授权董事会制定中期分红方案的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096667.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "关于续聘会计师事务所的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096666.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "独立董事王爱国2025年度述职报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096665.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "独立董事关鑫2025年度述职报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096664.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "独立董事刘培德2025年度述职报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096663.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "浪潮信息2025年度可持续发展报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096662.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "浪潮信息2025年度内部控制审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225096661.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "68.78"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.93 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "41.86"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "11.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "43.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "5.2%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.93"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "95.6%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 68.78，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 39.93 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "",
+      "current_price": 63.3,
+      "rating": "观察",
+      "total_score": 72.12,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 86,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-16",
+          "title": "关于“质量回报双提升”行动方案的进展公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225105324.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "关于公司向银行申请综合授信额度的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104931.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "关于确认董事、高级管理人员2025年度薪酬及2026年度薪酬方案的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104930.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "2025年度董事会工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104929.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "关于续聘会计师事务所的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104928.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "2025年度独立董事述职报告（侯玲玲）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104927.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "2025年度独立董事述职报告（宋宇红）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104926.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "2025年度独立董事述职报告（刘中华）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225104925.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "63.30"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "36.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "105.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "27.78"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "19.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "23.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "24.6%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.67"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "96.6%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 63.30，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 105.29 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 36.3%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000988.SZ",
+      "name": "华工科技",
+      "industry": "",
+      "current_price": 113.42,
+      "rating": "观察",
+      "total_score": 71.83,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 86,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-17",
+          "title": "北京市嘉源律师事务所关于华工科技产业股份有限公司2025年年度股东会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225113290.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "2025年年度股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225113289.PDF"
+        },
+        {
+          "date": "2026-04-14",
+          "title": "关于向香港联交所递交境外上市外资股（H股）发行并上市申请并刊发申请资料的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225100199.PDF"
+        },
+        {
+          "date": "2026-04-14",
+          "title": "2026年第一季度业绩预告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225097251.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "2025年度第一期短期融资券（科创债）兑付完成的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225055718.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "董事会审计委员会2025年度履职情况报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225031542.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "2025年度财务决算报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225031541.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "2025年度董事会工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225031540.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "113.42"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "-0.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "104.58 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "否"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "77.54"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "13.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "22.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "20.9%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.1%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "10.46"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "97.7%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 113.42，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 104.58 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录 PE-TTM 快照约 77.54，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300502.SZ",
+      "name": "新易盛",
+      "industry": "",
+      "current_price": 571.02,
+      "rating": "观察",
+      "total_score": 71.72,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-13",
+          "title": "北京国枫律师事务所关于成都新易盛通信技术股份有限公司2026年第一次临时股东大会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099334.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "成都新易盛通信技术股份有限公司2026年第一次临时股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099333.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "成都新易盛通信技术股份有限公司章程（2026年3月）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040990.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "关于调整董事会人数、变更公司注册资本、经营范围暨修改《公司章程》的的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040989.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "关于选举产生第五届董事会职工代表董事的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040988.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "关于预计2026年并确认2025年日常关联交易情况的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040987.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "关于召开2026年第一次临时股东会的通知",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040986.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "第五届董事会第十二次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040985.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "571.02"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "9"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.2%"
+        },
+        {
+          "name": "20日均额",
+          "value": "179.33 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "75.49"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "43.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "221.7%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "284.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "92.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "39.90"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.7%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 571.02，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 179.33 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "688256.SH",
+      "name": "寒武纪",
+      "industry": "",
+      "current_price": 1329.0,
+      "rating": "观察",
+      "total_score": 69.88,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 56,
+        "valuation": 60,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-15",
+          "title": "关于召开2025年度业绩说明会的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225101816.PDF"
+        },
+        {
+          "date": "2026-04-09",
+          "title": "关于向特定对象发行股票限售股上市流通公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225085814.PDF"
+        },
+        {
+          "date": "2026-04-09",
+          "title": "中信证券股份有限公司关于中科寒武纪科技股份有限公司2025年度向特定对象发行A股股票限售股上市流通的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225085813.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "中信证券股份有限公司关于中科寒武纪科技股份有限公司2025年度持续督导跟踪报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225076893.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "北京市中伦律师事务所关于中科寒武纪科技股份有限公司2025年年度股东会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225076886.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "2025年年度股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225076874.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "中信证券股份有限公司关于中科寒武纪科技股份有限公司2025年度持续督导工作现场检查报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225076866.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "2025年年度股东会会议资料",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225030713.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "1329.00"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "34.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "93.24 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "272.15"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "17.4%"
+        },
+        {
+          "name": "营收同比",
+          "value": "453.2%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "22.9%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "49.10"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "74.3%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 1329.00，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 93.24 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "",
+      "current_price": 117.1,
+      "rating": "观察",
+      "total_score": 69.62,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-17",
+          "title": "武汉光迅科技股份有限公司关于公司董事辞职的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111071.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "武汉光迅科技股份有限公司关于控股股东拟无偿划转公司股份暨控股股东拟发生变更的提示性公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111070.PDF"
+        },
+        {
+          "date": "2026-03-13",
+          "title": "武汉光迅科技股份有限公司股票交易异常波动公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-13/1225007160.PDF"
+        },
+        {
+          "date": "2026-02-27",
+          "title": "武汉光迅科技股份有限公司关于向特定对象发行股票申请获得深圳证券交易所审核中心审核通过的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-27/1224985073.PDF"
+        },
+        {
+          "date": "2026-02-14",
+          "title": "武汉光迅科技股份有限公司信息披露暂缓与豁免管理制度",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-14/1224980790.PDF"
+        },
+        {
+          "date": "2026-02-14",
+          "title": "武汉光迅科技股份有限公司互动易平台信息发布及回复内部审核制度",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-14/1224980789.PDF"
+        },
+        {
+          "date": "2026-02-14",
+          "title": "武汉光迅科技股份有限公司对外捐赠管理制度",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-14/1224980788.PDF"
+        },
+        {
+          "date": "2026-02-14",
+          "title": "武汉光迅科技股份有限公司关于预计2026年度1-3月份日常关联交易的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-14/1224980787.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "117.10"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "44.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "60.90 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "103.09"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "7.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "58.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "53.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.91"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 117.10，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 60.90 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 44.5%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300308.SZ",
+      "name": "中际旭创",
+      "industry": "",
+      "current_price": 848.01,
+      "rating": "观察",
+      "total_score": 69.47,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 38,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-20",
+          "title": "关于举行2025年度业绩说明会的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225129982.PDF"
+        },
+        {
+          "date": "2026-04-20",
+          "title": "北京中银（苏州）律师事务所关于公司2025年度股东会之法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225129981.PDF"
+        },
+        {
+          "date": "2026-04-20",
+          "title": "2025年度股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225129980.PDF"
+        },
+        {
+          "date": "2026-04-20",
+          "title": "关于公司第三期限制性股票激励计划首次授予部分第二个归属期归属结果暨股份上市公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225129944.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "2026年第一季度报告披露的提示性公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111944.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "第五届董事会第三十一次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111943.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "2026年一季度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF"
+        },
+        {
+          "date": "2026-04-15",
+          "title": "关于变更2026年第一季度报告预约披露时间的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225100461.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "848.01"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "38.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "193.74 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "63.03"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "16.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "192.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "273.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "71.7%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "26.54"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.5%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 848.01，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 193.74 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 38.9%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300394.SZ",
+      "name": "天孚通信",
+      "industry": "",
+      "current_price": 356.5,
+      "rating": "观察",
+      "total_score": 69.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 66,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "第五届董事会第十一次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225128022.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2026年一季度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225128020.PDF"
+        },
+        {
+          "date": "2026-04-10",
+          "title": "关于向香港联交所递交境外上市股份（H股）发行并上市申请并刊发申请资料的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-10/1225094554.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "华泰联合证券有限责任公司关于公司2025年度募集资金存放、管理和使用情况专项核查报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082736.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "江苏世纪同仁律师事务所关于公司作废2023年限制性股票激励计划部分已授予尚未归属的限制性股票的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082735.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "独立董事2025年度述职报告（路琳）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082734.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "独立董事2025年度述职报告（耿慧敏）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082733.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "关于举行2025年度网上业绩说明会的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082732.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "356.50"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "20.0%"
+        },
+        {
+          "name": "20日均额",
+          "value": "126.51 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "127.61"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "40.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "45.8%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "52.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.2%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 356.50，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 126.51 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000657.SZ",
+      "name": "中钨高新",
+      "industry": "",
+      "current_price": 58.05,
+      "rating": "观察",
+      "total_score": 69.08,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 54,
+        "valuation": 23,
+        "event": 79,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "股票交易异常波动公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225125591.PDF"
+        },
+        {
+          "date": "2026-04-10",
+          "title": "中钨高新材料股份有限公司2026年一季度业绩预增的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-10/1225089350.PDF"
+        },
+        {
+          "date": "2026-04-10",
+          "title": "中钨高新材料股份有限公司2025年度业绩快报",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-10/1225089349.PDF"
+        },
+        {
+          "date": "2026-03-02",
+          "title": "股票交易异常波动公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-02/1224988589.PDF"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "第十一届董事会第八次（临时）会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-11/1224975151.PDF"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "关于柿竹园公司增储的自愿性信息披露公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-21/1224942571.PDF"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "中信证券股份有限公司关于中钨高新材料股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易之部分限售股份解除限售上市流通的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-21/1224941943.PDF"
+        },
+        {
+          "date": "2026-01-21",
+          "title": "中钨高新材料股份有限公司关于发行股份及支付现金购买资产并募集配套资金暨关联交易之部分限售股份解除限售上市流通的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-21/1224941942.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "58.05"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "8"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "16.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.99 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "103.28"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "24.7%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "255.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "13.51"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.5%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 58.05，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 39.99 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002384.SZ",
+      "name": "东山精密",
+      "industry": "",
+      "current_price": 161.19,
+      "rating": "观察",
+      "total_score": 67.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-13",
+          "title": "关于股票交易异常波动的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225092563.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "2026年第一季度业绩预告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082260.PDF"
+        },
+        {
+          "date": "2026-04-08",
+          "title": "2025年度业绩快报",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225082259.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "第六届董事会第三十二次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225029917.PDF"
+        },
+        {
+          "date": "2026-03-11",
+          "title": "关于2026年员工持股计划非交易过户完成的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-11/1225002889.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "关于完成工商变更登记并换发营业执照的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224986731.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "关于2026年员工持股计划的进展公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224986730.PDF"
+        },
+        {
+          "date": "2026-02-14",
+          "title": "2026年度第一次临时股东会法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-14/1224981156.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "161.19"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "35.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "99.12 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "222.13"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "2.3%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "14.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.7%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "13.50"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.7%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 161.19，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 99.12 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 35.3%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601869.SH",
+      "name": "长飞光纤",
+      "industry": "",
+      "current_price": 371.76,
+      "rating": "观察",
+      "total_score": 67.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司关于公司及下属公司2026年度开展外汇及原材料套期保值业务的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048482.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司章程",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048467.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司2025年年度利润分配方案公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048313.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司关于公司及下属公司2026年度使用自有资金进行委托理财的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048298.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "审计委员会对毕马威华振会计师事务所（特殊普通合伙）2025年度履行监督职责情况的报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048239.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司2025年年度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048080.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司关于续聘公司2026年度审计机构的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225048053.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "长飞光纤光缆股份有限公司2025年度审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225047913.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "371.76"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "77.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "63.03 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "378.23"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "16.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "51.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.8%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "23.09"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.9%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 371.76，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 63.03 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 77.5%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "",
+      "current_price": 68.48,
+      "rating": "观察",
+      "total_score": 65.38,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 50,
+        "valuation": 38,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-04",
+          "title": "第九届董事会第二次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-04/1225079759.PDF"
+        },
+        {
+          "date": "2026-04-04",
+          "title": "关于实施高品质磷化铟单晶片建设项目的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-04/1225079758.PDF"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "关于股东部分股份解除质押的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-04/1224993782.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "关于董事会完成换届选举并聘任高级管理人员、证券事务代表、内审负责人的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989150.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "关于选举职工代表董事的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989149.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "关于云南临沧鑫圆锗业股份有限公司2026年第二次临时股东会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989148.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "2026年第二次临时股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989147.PDF"
+        },
+        {
+          "date": "2026-02-28",
+          "title": "第九届董事会第一次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989146.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "68.48"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "56.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "49.63 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "1070.78"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "73.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "30.60"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 68.48，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 49.63 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。",
+        "近20日涨幅约 56.9%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002463.SZ",
+      "name": "沪电股份",
+      "industry": "",
+      "current_price": 97.63,
+      "rating": "观察",
+      "total_score": 65.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-14",
+          "title": "2026年第一季度业绩预告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225097796.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "关于2025年度股东会增加临时提案暨股东会补充通知的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225070934.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "董事、高级管理人员薪酬管理制度",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225070933.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "董事、高级管理人员薪酬管理制度（草案）（H股发行并上市后适用）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225070932.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "第八届董事会第十七次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225070931.PDF"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "关于同意签署投资协议暨建设印制电路板生产项目及其配套设施的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-02/1225070930.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "关于全资子公司通过高新技术企业重新认定的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225029986.PDF"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "2025年度独立董事述职报告（王永翠）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-25/1225027854.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "97.63"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "16.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "67.65 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "49.15"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "12.48"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.9%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 97.63，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 67.65 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300274.SZ",
+      "name": "阳光电源",
+      "industry": "",
+      "current_price": 134.36,
+      "rating": "观察",
+      "total_score": 65.08,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 86,
+        "valuation": 50,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-16",
+          "title": "关于为子公司提供担保额度预计的进展公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225111332.PDF"
+        },
+        {
+          "date": "2026-04-14",
+          "title": "关于2025年限制性股票激励计划首次授予部分第一个归属期归属结果暨股份上市公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225097982.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "公司章程（草案）（H股发行并上市后适用）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099248.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "关于修订《公司章程（草案）》的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099247.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "独立董事候选人声明与承诺（魏铼）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099246.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "独立董事提名人声明与承诺（周萍华）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099245.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "独立董事提名人声明与承诺（魏铼）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099244.PDF"
+        },
+        {
+          "date": "2026-04-13",
+          "title": "独立董事候选人声明与承诺（周萍华）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-13/1225099243.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "134.36"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "-22.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "115.71 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线向上",
+          "value": "否"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "20.69"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "28.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "14.5%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "20.1%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "73.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "6.01"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "63.5%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 134.36，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 115.71 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "已记录 PE-TTM 快照约 20.69，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "价格尚未站上60日均线，中期趋势仍未确认。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "",
+      "current_price": 40.22,
+      "rating": "中性",
+      "total_score": 64.97,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 58,
+        "valuation": 38,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份关于计提2025年度资产减值准备的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133713.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份2025年度内部控制审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133708.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份关于2026年度开展商品期货和外汇套期保值业务的可行性分析报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133707.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份2026年第一季度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133705.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份2025年非经营性资金占用及其他关联资金往来情况汇总表的专项审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133704.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份2025年年度股东会通知",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133703.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份2025年度独立董事述职报告--韩坚",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133702.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "永鼎股份关于使用闲置自有资金购买理财产品的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225133700.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "40.22"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "51.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "55.31 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "572.60"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "4.8%"
+        },
+        {
+          "name": "营收同比",
+          "value": "41.9%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-48.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "83.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "18.52"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 40.22，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 55.31 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 51.1%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "industry": "",
+      "current_price": 450.8,
+      "rating": "中性",
+      "total_score": 64.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 78,
+        "fundamental_quality": 58,
+        "valuation": 35,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（陈胜华）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122954.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（刘怡）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122953.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（王志成）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122952.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（张大成）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122951.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（罗毅）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122950.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事述职报告（吴汉明）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122949.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "2025环境、社会及治理报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122948.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "2025年度内部控制审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225122947.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "450.80"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "0.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "36.63 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "59.17"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "14.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "31.9%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-5.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "98.1%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.05"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "86.8%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 450.80，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 36.63 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录 PE-TTM 快照约 59.17，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600487.SH",
+      "name": "亨通光电",
+      "industry": "",
+      "current_price": 58.28,
+      "rating": "中性",
+      "total_score": 63.52,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 54,
+        "valuation": 23,
+        "event": 72,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-14",
+          "title": "亨通光电2026年第一次临时股东会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225098824.PDF"
+        },
+        {
+          "date": "2026-04-14",
+          "title": "亨通光电2026年第一次临时股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-14/1225098770.PDF"
+        },
+        {
+          "date": "2026-04-10",
+          "title": "亨通光电关于控股股东增持计划实施完毕暨增持股份结果公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-10/1225086882.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "亨通光电2026年第一次临时股东会会议材料",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225074002.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "亨通光电关于控股股东部分股权及实控人全部股权解除质押公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225073996.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "亨通光电关于实控人部分股权解除质押及控股股东部分股权质押公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040247.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "亨通光电关于新增为控股子公司提供担保的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225030778.PDF"
+        },
+        {
+          "date": "2026-03-26",
+          "title": "亨通光电关于召开2026年第一次临时股东会的通知",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-26/1225030769.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "58.28"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "41.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "88.12 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "50.79"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "7.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "17.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "1.3%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 58.28，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 88.12 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "近20日涨幅约 41.7%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600879.SH",
+      "name": "航天电子",
+      "industry": "",
+      "current_price": 25.22,
+      "rating": "中性",
+      "total_score": 62.83,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-17",
+          "title": "航天时代电子技术股份有限公司关于2025年度第四期超短期融资券完成兑付的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225109914.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "航天时代电子技术股份有限公司关于2026年度第一期超短期融资券完成发行的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225075028.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "航天电子公司2025年度“提质增效重回报”行动方案评估报告暨2026年度“提质增效重回报”行动方案（上网）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040646.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "航天电子公司2025年度募集资金审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040645.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "独立董事2025年度述职报告（张松岩）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040640.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "航天电子公司2025年度募集资金存放与实际使用情况的专项报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040632.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "航天电子公司2025年涉及财务公司关联交易的存款、贷款等金融业务的专项说明",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040631.PDF"
+        },
+        {
+          "date": "2026-03-28",
+          "title": "航天时代电子技术股份有限公司董事会审计委员会2025年度履职情况报告（上网）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-28/1225040630.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "25.22"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "18.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "31.65 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "366.60"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.04"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "95.8%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 25.22，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 31.65 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "603986.SH",
+      "name": "兆易创新",
+      "industry": "",
+      "current_price": 302.01,
+      "rating": "回避",
+      "total_score": 61.92,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 76,
+        "valuation": 48,
+        "event": 39,
+        "risk": 80.5
+      },
+      "risk_flags": [
+        "shareholder_reduction"
+      ],
+      "events": [
+        {
+          "date": "2026-04-08",
+          "title": "兆易创新股东减持股份计划公告",
+          "impact": "negative",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-08/1225083090.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "兆易创新2025年年度股东会会议资料",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225075989.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "兆易创新第五届董事会第十次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061433.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "中国国际金融股份有限公司关于兆易创新2025年度募集资金存放、管理与实际使用情况的专项核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061425.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "兆易创新2025年度内部控制审计报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061424.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "兆易创新2025年度利润分配预案公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061423.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "兆易创新关于变更公司注册资本暨修改《公司章程》的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061409.PDF"
+        },
+        {
+          "date": "2026-03-31",
+          "title": "兆易创新独立董事2025年度述职报告（陈洁）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-31/1225061402.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "302.01"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "0.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "97.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "128.48"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "25.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "52.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "52.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "10.72"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "94.5%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 302.01，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 97.29 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录 PE-TTM 快照约 128.48，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。",
+        "存在大股东或高管减持风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "688525.SH",
+      "name": "佰维存储",
+      "industry": "",
+      "current_price": 268.8,
+      "rating": "回避",
+      "total_score": 61.42,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 56,
+        "valuation": 50,
+        "event": 51,
+        "risk": 80.5
+      },
+      "risk_flags": [
+        "shareholder_reduction"
+      ],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "关于召开2025年度现金分红说明会的公告",
+          "impact": "positive",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225124894.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "股东减持股份计划公告",
+          "impact": "negative",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225113279.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "关于召开2025年年度股东会的通知",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225111153.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "2026年第一季度报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107320.PDF"
+        },
+        {
+          "date": "2026-04-09",
+          "title": "关于公司收到《民事起诉状》的自愿性披露公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225085901.PDF"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "关于2024年限制性股票激励计划首次授予第二个归属期归属结果暨股份上市的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-01/1225068321.PDF"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "关于2026年第一季度为控股子公司提供担保的进展公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-01/1225067360.PDF"
+        },
+        {
+          "date": "2026-03-27",
+          "title": "华泰联合证券有限责任公司关于深圳佰维存储科技股份有限公司2025年度持续督导跟踪报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-03-27/1225037886.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "268.80"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "12.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "94.60 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "32.04"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "34.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "341.5%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "0.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "14.86"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "82.4%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 268.80，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 94.60 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。",
+        "存在大股东或高管减持风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "300058.SZ",
+      "name": "蓝色光标",
+      "industry": "",
+      "current_price": 18.69,
+      "rating": "回避",
+      "total_score": 59.97,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 58,
+        "valuation": 38,
+        "event": 60,
+        "risk": 70.5
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "events": [
+        {
+          "date": "2026-04-16",
+          "title": "关于公司及子公司使用自有资金进行风险投资额度授权的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225108034.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "关于使用闲置自有资金进行委托理财的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225108033.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "关于全资子公司与专业投资机构共同投资的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225108032.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "关于续聘会计师事务所的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107681.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "2025年度董事会工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107680.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "关于公司董事、高级管理人员2026年度薪酬方案的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107679.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "独立董事2025年度述职报告（吴志攀）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107678.PDF"
+        },
+        {
+          "date": "2026-04-16",
+          "title": "独立董事2025年度述职报告（冈栋俊）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225107677.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "18.69"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "34.6%"
+        },
+        {
+          "name": "20日均额",
+          "value": "68.41 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "298.67"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "2.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "13.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "61.2%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "8.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.4%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 18.69，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 68.41 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "002837.SZ",
+      "name": "英维克",
+      "industry": "",
+      "current_price": 108.97,
+      "rating": "中性",
+      "total_score": 59.23,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 26,
+        "valuation": 23,
+        "event": 60,
+        "risk": 80.5
+      },
+      "risk_flags": [],
+      "events": [
+        {
+          "date": "2026-04-21",
+          "title": "2026年度董事、高级管理人员薪酬方案",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131850.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度投资者保护工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131849.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年年度财务报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131848.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度独立董事述职报告（屈锐征）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131847.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度独立董事述职报告（陈麒百）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131846.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度独立董事述职报告（田志伟）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131845.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度独立董事述职报告（文芳）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131844.PDF"
+        },
+        {
+          "date": "2026-04-21",
+          "title": "2025年度独立董事述职报告（严青）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225131843.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "108.97"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "15.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "45.14 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "220.72"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "0.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "26.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-74.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "35.69"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 108.97，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 45.14 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "未识别到单项硬性回避风险，但仍需跟踪财报、估值分位、公告和市场风格变化。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300136.SZ",
+      "name": "信维通信",
+      "industry": "",
+      "current_price": 77.61,
+      "rating": "回避",
+      "total_score": 57.22,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 56,
+        "valuation": 23,
+        "event": 60,
+        "risk": 70.5
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "events": [
+        {
+          "date": "2026-04-18",
+          "title": "2025年度投资者保护工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121186.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "2025年度董事会工作报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121185.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "关于举行2025年度网上业绩说明会的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121184.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "2025年度财务决算报告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121183.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "关于拟续聘会计师事务所的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121182.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事2025年年度述职报告（夏俊）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121181.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事2025年年度述职报告（邓磊-已届满离任）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121180.PDF"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "独立董事2025年年度述职报告（李莉）",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225121179.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "77.61"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "24.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "54.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "102.02"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "1.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "14.3%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "41.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.38"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "96.3%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 77.61，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 54.29 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "出现20日区间突破信号，短期资金推动较前期增强。"
+      ],
+      "risks": [
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "300857.SZ",
+      "name": "协创数据",
+      "industry": "",
+      "current_price": 300.22,
+      "rating": "回避",
+      "total_score": 50.48,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 45,
+        "risk": 80.5
+      },
+      "risk_flags": [
+        "shareholder_reduction"
+      ],
+      "events": [
+        {
+          "date": "2026-04-20",
+          "title": "股东询价转让定价情况的提示性公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225129054.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "互动易平台信息发布及回复内部审核制度",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122497.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "关于持股5%以上股东为公司及子公司提供资金支持暨关联交易的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122496.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "关于2026年第四次临时股东会增加临时议案暨股东会补充通知的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122495.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "第四届董事会第十四次会议决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122494.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "上海君澜律师事务所关于协创数据技术股份有限公司调整2023年限制性股票激励计划授予价格及数量之法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122493.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "关于调整2023年限制性股票激励计划授予价格及授予数量的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122492.PDF"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "国金证券股份有限公司关于协创数据技术股份有限公司股东向特定机构投资者询价转让股份相关资格的核查意见",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-17/1225122491.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "300.22"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "40.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.93 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "89.24"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.2%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "24.28"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.6%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 300.22，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 39.93 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。",
+        "近20日涨幅约 40.5%，短期追高和交易拥挤风险上升。",
+        "存在大股东或高管减持风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位持续放量但价格不能创新高，交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "",
+      "current_price": 150.47,
+      "rating": "回避",
+      "total_score": 46.67,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 100,
+        "fundamental_quality": 44,
+        "valuation": 35,
+        "event": 39,
+        "risk": 70.5
+      },
+      "risk_flags": [
+        "overheated_turnover",
+        "shareholder_reduction"
+      ],
+      "events": [
+        {
+          "date": "2026-04-16",
+          "title": "H股公告-董事会会议日期",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-16/1225105937.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "第五届董事会薪酬与考核委员会关于2026年股票期权与限制性股票激励计划激励对象名单的核查意见及公示情况说明",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225092661.PDF"
+        },
+        {
+          "date": "2026-04-11",
+          "title": "控股股东及其一致行动人减持股份计划公告",
+          "impact": "negative",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-11/1225092660.PDF"
+        },
+        {
+          "date": "2026-04-09",
+          "title": "H股公告-月报表",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225085478.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "H股公告-2025年年度股东会通告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225078550.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "H股公告-2025年报",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225078549.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "H股公告-2025年年度股东会之代表委托表格",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225078548.PDF"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "H股公告-H股限制性股票激励计划",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-04-03/1225078546.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "150.47"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "10"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "32.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "36.03 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "201.39"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "3.5%"
+        },
+        {
+          "name": "营收同比",
+          "value": "32.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "33.3%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "7.21"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "70.3%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 150.47，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 36.03 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。"
+      ],
+      "risks": [
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "存在大股东或高管减持风险。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "后续财报、估值和公告数据与当前研究前提保持一致。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "下一期财务或公告数据显著低于当前研究前提。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.82
+      },
+      "risk_level": "high",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "000547.SZ",
+      "name": "航天发展",
+      "industry": "",
+      "current_price": 27.9,
+      "rating": "回避",
+      "total_score": 38.52,
+      "confidence": 0.82,
+      "dimension_scores": {
+        "trend_volume_price": 68,
+        "fundamental_quality": 48,
+        "valuation": 38,
+        "event": 39,
+        "risk": 70.5
+      },
+      "risk_flags": [
+        "overheated_turnover",
+        "shareholder_reduction"
+      ],
+      "events": [
+        {
+          "date": "2026-02-28",
+          "title": "关于公司完成住所变更工商登记的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224987681.PDF"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "北京市中伦律师事务所关于航天工业发展股份有限公司2026年第一次临时股东会的法律意见书",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-11/1224975607.PDF"
+        },
+        {
+          "date": "2026-02-11",
+          "title": "公司2026年第一次临时股东会决议公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-11/1224975606.PDF"
+        },
+        {
+          "date": "2026-02-04",
+          "title": "股票交易异常波动公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-02-04/1224965374.PDF"
+        },
+        {
+          "date": "2026-01-31",
+          "title": "2025年度业绩预告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-31/1224959249.PDF"
+        },
+        {
+          "date": "2026-01-28",
+          "title": "关于持股5%以上股东减持股份触及1%整数倍的公告",
+          "impact": "negative",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-28/1224952265.PDF"
+        },
+        {
+          "date": "2026-01-24",
+          "title": "关于变更公司住所并修订《公司章程》的公告",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-24/1224948112.PDF"
+        },
+        {
+          "date": "2026-01-24",
+          "title": "关于召开2026年第一次临时股东会的通知",
+          "impact": "neutral",
+          "severity": "medium",
+          "source": "cninfo.hisAnnouncement",
+          "url": "http://static.cninfo.com.cn/finalpage/2026-01-24/1224948111.PDF"
+        }
+      ],
+      "key_metrics": [
+        {
+          "name": "当前价格",
+          "value": "27.90"
+        },
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily：80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "公告/事件数量",
+          "value": "9"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "2.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "51.11 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "-27.81"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "-10.4%"
+        },
+        {
+          "name": "营收同比",
+          "value": "42.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "62.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.78"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "94.9%"
+        }
+      ],
+      "core_reasons": [
+        "已记录当前价格 27.90，便于候选池复盘时核对价格位置。",
+        "近20日平均成交额约 51.11 亿元，满足本轮流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录 PE-TTM 快照约 -27.81，可作为后续估值复核基准。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，盈利质量判断可靠性较低。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "价格尚未站上60日均线，中期趋势仍未确认。",
+        "存在大股东或高管减持风险。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格维持在20日均线附近或上方，且20日均线未由升转降。",
+        "未新增 ST、退市风险、监管处罚、重大诉讼或严重流动性风险。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未显著切换到与候选池相反的防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy"
+        ],
+        "quality_score": 0.82
+      },
+      "risk_level": "high",
+      "avoid": false,
+      "downgraded": true
+    }
+  ],
+  "methodology_version": "ashare-research-signal-v1.2",
+  "data_sources": [
+    "tencent.qt.gtimg.cn",
+    "akshare.stock_zh_a_daily",
+    "akshare.stock_financial_analysis_indicator",
+    "akshare.stock_zh_valuation_baidu",
+    "cninfo.hisAnnouncement"
+  ],
+  "compliance_disclaimer": "本结果基于公开数据和规则化评分模型生成，仅用于投资研究辅助；不构成收益承诺、买卖建议或个性化投顾服务。"
+}

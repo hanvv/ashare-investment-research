@@ -1,0 +1,1729 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "002475.SZ",
+      "300308.SZ",
+      "300750.SZ",
+      "300502.SZ",
+      "300476.SZ",
+      "002384.SZ",
+      "300058.SZ",
+      "300394.SZ",
+      "600487.SH",
+      "601138.SH",
+      "300136.SZ",
+      "000977.SZ",
+      "000988.SZ",
+      "688256.SH",
+      "002837.SZ",
+      "603083.SH",
+      "603986.SH",
+      "002281.SZ",
+      "300274.SZ",
+      "000547.SZ",
+      "688525.SH",
+      "002371.SZ",
+      "000657.SZ",
+      "601869.SH",
+      "601899.SH",
+      "600105.SH",
+      "002428.SZ",
+      "002463.SZ",
+      "300857.SZ",
+      "600879.SH"
+    ],
+    "filters": {
+      "exclude_st": true,
+      "min_amount": 1000000000.0,
+      "source": "tencent.qt.gtimg.cn",
+      "fallback_path": [
+        "eastmoney_push2_failed",
+        "xueqiu_failed",
+        "tencent_used"
+      ]
+    }
+  },
+  "summary": {
+    "market_view": "东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。 已尝试使用 AkShare 补充 K 线趋势因子，成功 0 只，失败 30 只。",
+    "candidate_count": 30,
+    "risk_level": "medium",
+    "style_bias": [
+      "流动性",
+      "备源行情初筛"
+    ]
+  },
+  "results": [
+    {
+      "symbol": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300308.SZ",
+      "name": "中际旭创",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300502.SZ",
+      "name": "新易盛",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300476.SZ",
+      "name": "胜宏科技",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002384.SZ",
+      "name": "东山精密",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300394.SZ",
+      "name": "天孚通信",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600487.SH",
+      "name": "亨通光电",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601138.SH",
+      "name": "工业富联",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000988.SZ",
+      "name": "华工科技",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "688256.SH",
+      "name": "寒武纪",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002837.SZ",
+      "name": "英维克",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "603986.SH",
+      "name": "兆易创新",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300274.SZ",
+      "name": "阳光电源",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "688525.SH",
+      "name": "佰维存储",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000657.SZ",
+      "name": "中钨高新",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601869.SH",
+      "name": "长飞光纤",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002463.SZ",
+      "name": "沪电股份",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300857.SZ",
+      "name": "协创数据",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600879.SH",
+      "name": "航天电子",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 54.8,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 72.0
+      },
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前趋势因子尚未形成明确优势。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300058.SZ",
+      "name": "蓝色光标",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 45.3,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 62.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "换手率偏高，短期交易拥挤风险需要复核。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "300136.SZ",
+      "name": "信维通信",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 45.3,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 62.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "换手率偏高，短期交易拥挤风险需要复核。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 45.3,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 62.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "换手率偏高，短期交易拥挤风险需要复核。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "000547.SZ",
+      "name": "航天发展",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 45.3,
+      "confidence": 0.48,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 50,
+        "valuation": 50,
+        "event": 60,
+        "risk": 62.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "换手率偏高，短期交易拥挤风险需要复核。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    }
+  ],
+  "methodology_version": "ashare-research-signal-v1.0",
+  "data_sources": [
+    "tencent.qt.gtimg.cn",
+    "akshare.stock_zh_a_hist"
+  ],
+  "compliance_disclaimer": "本结果基于公开数据和规则化评分模型生成，仅用于投资研究辅助，不构成任何收益承诺、买卖建议或个性化投顾服务。"
+}

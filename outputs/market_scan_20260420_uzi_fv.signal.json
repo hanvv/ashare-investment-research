@@ -1,0 +1,3760 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "002475.SZ",
+      "300308.SZ",
+      "300750.SZ",
+      "300502.SZ",
+      "300476.SZ",
+      "002384.SZ",
+      "300058.SZ",
+      "300394.SZ",
+      "600487.SH",
+      "601138.SH",
+      "300136.SZ",
+      "000977.SZ",
+      "000988.SZ",
+      "688256.SH",
+      "002837.SZ",
+      "603083.SH",
+      "603986.SH",
+      "002281.SZ",
+      "300274.SZ",
+      "000547.SZ",
+      "688525.SH",
+      "002371.SZ",
+      "000657.SZ",
+      "601869.SH",
+      "601899.SH",
+      "600105.SH",
+      "002428.SZ",
+      "002463.SZ",
+      "300857.SZ",
+      "600879.SH"
+    ],
+    "filters": {
+      "exclude_st": true,
+      "min_amount": 1000000000.0,
+      "source": "tencent.qt.gtimg.cn",
+      "fallback_path": [
+        "eastmoney_push2_failed",
+        "xueqiu_failed",
+        "tencent_used"
+      ]
+    }
+  },
+  "summary": {
+    "market_view": "东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 与 UZI-Skill 的 K 线 fallback 链，未使用 sqlite 缓存；成功 30 只，失败 0 只。 已尝试使用 AkShare 补充基本面字段和近三年估值分位；基本面成功 26 只，估值成功 30 只。",
+    "candidate_count": 30,
+    "risk_level": "medium",
+    "style_bias": [
+      "流动性",
+      "备源行情初筛"
+    ]
+  },
+  "results": [
+    {
+      "symbol": "300476.SZ",
+      "name": "胜宏科技",
+      "industry": "",
+      "rating": "关注",
+      "total_score": 78.12,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 100,
+        "fundamental_quality": 86,
+        "valuation": 38,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "23.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "103.94 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "69.41"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "25.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "79.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "273.5%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "86.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "18.01"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "92.4%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 103.94 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.08,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "low",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "rating": "关注",
+      "total_score": 75.62,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 50,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "4.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "143.47 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "24.99"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.8%"
+        },
+        {
+          "name": "营收同比",
+          "value": "52.4%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "53.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "74.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.53"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "85.2%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 143.47 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 24.99，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.08,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "low",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "603986.SH",
+      "name": "兆易创新",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 72.92,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 76,
+        "valuation": 48,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "0.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "97.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "123.60"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "25.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "52.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "52.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "10.72"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "94.5%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 97.29 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "已记录PE-TTM快照约 123.60，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601138.SH",
+      "name": "工业富联",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 72.62,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 64,
+        "valuation": 50,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "88.54 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "34.59"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "21.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "48.2%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "51.9%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "82.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "7.32"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "88.2%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 88.54 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 71.97,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 86,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "36.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "105.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "28.85"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "19.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "23.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "24.6%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.67"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "96.6%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 105.29 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 36.3%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000988.SZ",
+      "name": "华工科技",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 71.67,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 86,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "-0.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "104.58 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "否"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "78.61"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "13.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "22.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "20.9%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.1%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "10.46"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "97.7%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 104.58 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方，但20日均线斜率仍需继续确认。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 78.61，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300502.SZ",
+      "name": "新易盛",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 71.58,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.2%"
+        },
+        {
+          "name": "20日均额",
+          "value": "179.33 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "77.07"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "43.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "221.7%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "284.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "92.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "39.90"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.7%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 179.33 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 77.07，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 71.58,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "22.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.93 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "44.50"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "11.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "43.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "5.2%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.93"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "95.6%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 39.93 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 70.33,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 68,
+        "fundamental_quality": 86,
+        "valuation": 50,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "10.0%"
+        },
+        {
+          "name": "20日均额",
+          "value": "92.43 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "17.88"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "27.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "15.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "62.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "65.6%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "5.03"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "89.7%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 92.43 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录PE-TTM快照约 17.88，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "价格尚未站上60日均线，中期趋势仍未确认。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "688525.SH",
+      "name": "佰维存储",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 70.25,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 56,
+        "valuation": 50,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "12.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "94.60 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "32.03"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "34.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "341.5%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "0.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "14.86"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "82.4%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 94.60 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 32.03，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 69.47,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "44.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "60.90 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "105.69"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "7.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "58.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "53.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.91"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 60.90 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 44.5%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "688256.SH",
+      "name": "寒武纪",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 69.35,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 56,
+        "valuation": 60,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "34.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "93.24 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "282.23"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "17.4%"
+        },
+        {
+          "name": "营收同比",
+          "value": "453.2%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "22.9%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "49.10"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "74.3%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 93.24 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300308.SZ",
+      "name": "中际旭创",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 69.33,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 38,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "38.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "193.74 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "63.18"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "16.1%"
+        },
+        {
+          "name": "营收同比",
+          "value": "192.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "273.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "71.7%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "26.54"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.5%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 193.74 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 63.18，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 38.9%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300394.SZ",
+      "name": "天孚通信",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 69.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 66,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "20.0%"
+        },
+        {
+          "name": "20日均额",
+          "value": "126.51 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "144.33"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "40.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "45.8%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "52.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.2%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 126.51 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 144.33，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002384.SZ",
+      "name": "东山精密",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 67.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "35.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "99.12 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "216.35"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "2.3%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "14.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.7%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "13.50"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.7%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 99.12 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 216.35，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 35.3%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "601869.SH",
+      "name": "长飞光纤",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 67.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 76,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "77.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "63.03 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "391.70"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "5.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "16.8%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "51.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "99.8%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "23.09"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.9%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 63.03 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 391.70，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 77.5%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "000657.SZ",
+      "name": "中钨高新",
+      "industry": "",
+      "rating": "观察",
+      "total_score": 66.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 54,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "16.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.99 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "104.16"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "8.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "24.7%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "255.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "13.51"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.5%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 39.99 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.05,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300274.SZ",
+      "name": "阳光电源",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 64.92,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 50,
+        "fundamental_quality": 86,
+        "valuation": 50,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "-22.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "115.71 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线向上",
+          "value": "否"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "20.82"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "28.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "14.5%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "20.1%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "73.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "6.01"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "63.5%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 115.71 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "已记录PE-TTM快照约 20.82，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "价格尚未站上60日均线，中期趋势仍未确认。"
+      ],
+      "valid_conditions": [
+        "价格重新站上20日均线并连续维持，短线趋势才算重新生效。",
+        "价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 64.85,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 87,
+        "fundamental_quality": 50,
+        "valuation": 38,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "56.9%"
+        },
+        {
+          "name": "20日均额",
+          "value": "49.63 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "1066.40"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "73.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "30.60"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 49.63 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 56.9%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 64.83,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 58,
+        "valuation": 38,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "51.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "55.31 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "183.40"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "4.8%"
+        },
+        {
+          "name": "营收同比",
+          "value": "41.9%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-48.4%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "83.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "18.52"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 55.31 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 183.40，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 51.1%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002463.SZ",
+      "name": "沪电股份",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 64.7,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "16.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "67.65 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "49.34"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "12.48"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.9%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 67.65 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 49.34，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 64.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 78,
+        "fundamental_quality": 58,
+        "valuation": 35,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "0.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "36.63 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "61.86"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "14.6%"
+        },
+        {
+          "name": "营收同比",
+          "value": "31.9%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-5.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "98.1%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.05"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "86.8%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 36.63 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "已记录PE-TTM快照约 61.86，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600879.SH",
+      "name": "航天电子",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 62.3,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 86,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "18.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "31.65 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "371.10"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.4%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.04"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "95.8%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 31.65 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "600487.SH",
+      "name": "亨通光电",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 61.57,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 54,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "41.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "88.12 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "53.07"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "7.7%"
+        },
+        {
+          "name": "营收同比",
+          "value": "17.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "1.3%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "4.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 88.12 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 53.07，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 41.7%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300857.SZ",
+      "name": "协创数据",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 60.2,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 79,
+        "fundamental_quality": 50,
+        "valuation": 23,
+        "event": 60,
+        "risk": 77.0
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "40.5%"
+        },
+        {
+          "name": "20日均额",
+          "value": "39.93 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "91.55"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "缺失"
+        },
+        {
+          "name": "营收同比",
+          "value": "缺失"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "96.2%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "24.28"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "99.6%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 39.93 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "已记录PE-TTM快照约 91.55，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "近20日涨幅约 40.5%，短期追高和交易拥挤风险上升。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "高位继续放量但价格不能创新高，说明交易拥挤开始反噬。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "002837.SZ",
+      "name": "英维克",
+      "industry": "",
+      "rating": "中性",
+      "total_score": 59.07,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 26,
+        "valuation": 23,
+        "event": 60,
+        "risk": 79.5
+      },
+      "risk_flags": [],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "15.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "45.14 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "236.97"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "0.2%"
+        },
+        {
+          "name": "营收同比",
+          "value": "26.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "-74.0%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "100.0%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "35.69"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "100.0%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 45.14 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0.03,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": false
+    },
+    {
+      "symbol": "300058.SZ",
+      "name": "蓝色光标",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 59.45,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 58,
+        "valuation": 38,
+        "event": 60,
+        "risk": 67.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "34.6%"
+        },
+        {
+          "name": "20日均额",
+          "value": "68.41 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "312.09"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "2.9%"
+        },
+        {
+          "name": "营收同比",
+          "value": "13.0%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "61.2%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "8.88"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "98.4%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 68.41 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 57.67,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 100,
+        "fundamental_quality": 44,
+        "valuation": 35,
+        "event": 60,
+        "risk": 69.5
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "32.1%"
+        },
+        {
+          "name": "20日均额",
+          "value": "36.03 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "203.84"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "3.5%"
+        },
+        {
+          "name": "营收同比",
+          "value": "32.1%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "33.3%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "7.21"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "70.3%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 36.03 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格站上60日均线且20日均线高于60日均线，中期结构相对占优。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "300136.SZ",
+      "name": "信维通信",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 57.08,
+      "confidence": 0.78,
+      "dimension_scores": {
+        "trend_volume_price": 94,
+        "fundamental_quality": 56,
+        "valuation": 23,
+        "event": 60,
+        "risk": 69.5
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "24.3%"
+        },
+        {
+          "name": "20日均额",
+          "value": "54.29 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "是"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "102.27"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "1.3%"
+        },
+        {
+          "name": "营收同比",
+          "value": "14.3%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "41.7%"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "93.3%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.38"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "96.3%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 54.29 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "价格位于60日均线上方，中期趋势尚未明显转弱。",
+        "出现20日区间突破信号，说明短期资金推动力度较前期增强。"
+      ],
+      "risks": [
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格不有效跌破60日均线，中期结构保持不破坏。",
+        "突破后回踩不跌回突破区间，且不出现明显放量滞涨。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    },
+    {
+      "symbol": "000547.SZ",
+      "name": "航天发展",
+      "industry": "",
+      "rating": "回避",
+      "total_score": 49.15,
+      "confidence": 0.68,
+      "dimension_scores": {
+        "trend_volume_price": 68,
+        "fundamental_quality": 48,
+        "valuation": 38,
+        "event": 60,
+        "risk": 67.0
+      },
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "key_metrics": [
+        {
+          "name": "K线来源",
+          "value": "akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20"
+        },
+        {
+          "name": "20日涨跌幅",
+          "value": "2.7%"
+        },
+        {
+          "name": "20日均额",
+          "value": "51.11 亿元"
+        },
+        {
+          "name": "价格站上20日线",
+          "value": "是"
+        },
+        {
+          "name": "20日线向上",
+          "value": "是"
+        },
+        {
+          "name": "价格站上60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日线高于60日线",
+          "value": "否"
+        },
+        {
+          "name": "20日突破",
+          "value": "否"
+        },
+        {
+          "name": "PE-TTM快照",
+          "value": "467.38"
+        },
+        {
+          "name": "ROE-TTM",
+          "value": "-10.4%"
+        },
+        {
+          "name": "营收同比",
+          "value": "42.6%"
+        },
+        {
+          "name": "净利润同比",
+          "value": "缺失"
+        },
+        {
+          "name": "PE三年分位",
+          "value": "62.5%"
+        },
+        {
+          "name": "PB-LF",
+          "value": "9.78"
+        },
+        {
+          "name": "PB三年分位",
+          "value": "94.9%"
+        }
+      ],
+      "core_reasons": [
+        "近20日平均成交额约 51.11 亿元，满足本轮高流动性初筛要求。",
+        "K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。",
+        "价格位于20日均线上方且20日均线向上，短线趋势结构偏强。",
+        "已记录PE-TTM快照约 467.38，可作为后续估值分位复核的基准。"
+      ],
+      "risks": [
+        "基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。",
+        "公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。",
+        "换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。",
+        "价格尚未站上60日均线，中期趋势仍未确认。",
+        "短期涨幅或换手过高，存在交易拥挤风险。"
+      ],
+      "valid_conditions": [
+        "价格继续站稳20日均线，且20日均线不由升转降。",
+        "价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。",
+        "补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。",
+        "市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。"
+      ],
+      "position_range": {
+        "min": 0,
+        "max": 0,
+        "unit": "portfolio_weight"
+      },
+      "suitable_for": [
+        "能理解研究信号不等于交易指令的投资者"
+      ],
+      "not_suitable_for": [
+        "无法承受市场波动或需要确定性收益的投资者"
+      ],
+      "invalid_conditions": [
+        "跌破20日均线且成交额放大，短线趋势信号失效。",
+        "有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。",
+        "补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。",
+        "成交额明显萎缩导致流动性初筛条件不再满足。",
+        "出现重大负面公告、监管处罚或退市风险提示。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "risk_level": "medium",
+      "avoid": false,
+      "downgraded": true
+    }
+  ],
+  "methodology_version": "ashare-research-signal-v1.1",
+  "data_sources": [
+    "tencent.qt.gtimg.cn",
+    "akshare.stock_zh_a_daily",
+    "akshare.stock_financial_analysis_indicator",
+    "akshare.stock_zh_valuation_baidu"
+  ],
+  "compliance_disclaimer": "本结果基于公开数据和规则化评分模型生成，仅用于投资研究辅助，不构成收益承诺、买卖建议或个性化投顾服务。"
+}

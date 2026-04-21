@@ -1,0 +1,1178 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "002475.SZ",
+      "300308.SZ",
+      "300750.SZ",
+      "300502.SZ",
+      "300476.SZ",
+      "002384.SZ",
+      "300058.SZ",
+      "300394.SZ",
+      "600487.SH",
+      "601138.SH",
+      "300136.SZ",
+      "000977.SZ",
+      "000988.SZ",
+      "688256.SH",
+      "002837.SZ",
+      "603083.SH",
+      "603986.SH",
+      "002281.SZ",
+      "300274.SZ",
+      "000547.SZ",
+      "688525.SH",
+      "002371.SZ",
+      "000657.SZ",
+      "601869.SH",
+      "601899.SH",
+      "600105.SH",
+      "002428.SZ",
+      "002463.SZ",
+      "300857.SZ",
+      "600879.SH"
+    ],
+    "filters": {
+      "exclude_st": true,
+      "min_amount": 1000000000.0,
+      "source": "tencent.qt.gtimg.cn",
+      "fallback_path": [
+        "eastmoney_push2_failed",
+        "xueqiu_failed",
+        "tencent_used"
+      ]
+    }
+  },
+  "data_sources": [
+    "tencent.qt.gtimg.cn"
+  ],
+  "market_view": "东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。",
+  "style_bias": [
+    "流动性",
+    "备源行情初筛"
+  ],
+  "stocks": [
+    {
+      "symbol": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.10008368200836838,
+        "pe_ttm_snapshot": 28.85
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300308.SZ",
+      "name": "中际旭创",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.001175088131609825,
+        "pe_ttm_snapshot": 63.18
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.026339486717694705,
+        "pe_ttm_snapshot": 24.99
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300502.SZ",
+      "name": "新易盛",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.01018675721561968,
+        "pe_ttm_snapshot": 77.07
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300476.SZ",
+      "name": "胜宏科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.050793456283315885,
+        "pe_ttm_snapshot": 69.41
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002384.SZ",
+      "name": "东山精密",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.031462060456508345,
+        "pe_ttm_snapshot": 216.35
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300058.SZ",
+      "name": "蓝色光标",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.08499999999999996,
+        "pe_ttm_snapshot": 312.09
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300394.SZ",
+      "name": "天孚通信",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.012602826407930756,
+        "pe_ttm_snapshot": 144.32
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "600487.SH",
+      "name": "亨通光电",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.09415992812219232,
+        "pe_ttm_snapshot": 53.07
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "601138.SH",
+      "name": "工业富联",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.008856814826964099,
+        "pe_ttm_snapshot": 34.59
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300136.SZ",
+      "name": "信维通信",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.03857962888799893,
+        "pe_ttm_snapshot": 102.27
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0716693536567492,
+        "pe_ttm_snapshot": 44.5
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "000988.SZ",
+      "name": "华工科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.014569763455605123,
+        "pe_ttm_snapshot": 78.61
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "688256.SH",
+      "name": "寒武纪",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.03313343328335838,
+        "pe_ttm_snapshot": 282.23
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002837.SZ",
+      "name": "英维克",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.09406343182434253,
+        "pe_ttm_snapshot": 236.97
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.04824833092435821,
+        "pe_ttm_snapshot": 203.84
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "603986.SH",
+      "name": "兆易创新",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.005467884828350034,
+        "pe_ttm_snapshot": 123.6
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.02756141402037149,
+        "pe_ttm_snapshot": 105.69
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300274.SZ",
+      "name": "阳光电源",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.018455743879472575,
+        "pe_ttm_snapshot": 20.82
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "000547.SZ",
+      "name": "航天发展",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.06560415122312824,
+        "pe_ttm_snapshot": -28.66
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "688525.SH",
+      "name": "佰维存储",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.007278235489710849,
+        "pe_ttm_snapshot": 32.03
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.002809048541210002,
+        "pe_ttm_snapshot": 61.86
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "000657.SZ",
+      "name": "中钨高新",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.04312188168210973,
+        "pe_ttm_snapshot": 104.16
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "601869.SH",
+      "name": "长飞光纤",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0522288119380141,
+        "pe_ttm_snapshot": 391.7
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0025914195220271274,
+        "pe_ttm_snapshot": 17.88
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.012106537530266248,
+        "pe_ttm_snapshot": 183.4
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.10000000000000009,
+        "pe_ttm_snapshot": 1066.4
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "002463.SZ",
+      "name": "沪电股份",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0034814663116937705,
+        "pe_ttm_snapshot": 49.34
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300857.SZ",
+      "name": "协创数据",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.028116124960555267,
+        "pe_ttm_snapshot": 91.55
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "600879.SH",
+      "name": "航天电子",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.09009393680614863,
+        "pe_ttm_snapshot": 371.1
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "pe_percentile_3y",
+          "pb_percentile_3y",
+          "announcements"
+        ],
+        "quality_score": 0.48
+      }
+    }
+  ]
+}

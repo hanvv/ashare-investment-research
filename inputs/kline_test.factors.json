@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": ["600900.SH", "300750.SZ"],
+    "filters": {
+      "test": true
+    }
+  },
+  "data_sources": ["manual_test_input"],
+  "market_view": "AkShare K 线补充脚本测试输入。",
+  "style_bias": ["kline_test"],
+  "stocks": [
+    {
+      "symbol": "600900.SH",
+      "name": "长江电力",
+      "industry": "",
+      "factors": {},
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": ["ma20", "ma60"],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "factors": {},
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": ["ma20", "ma60"],
+        "quality_score": 0.48
+      }
+    }
+  ]
+}

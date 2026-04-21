@@ -1,0 +1,110 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "600900.SH",
+      "300750.SZ"
+    ],
+    "filters": {
+      "test": true
+    }
+  },
+  "data_sources": [
+    "manual_test_input",
+    "akshare.stock_zh_a_daily"
+  ],
+  "market_view": "AkShare K 线补充脚本测试输入。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 与 UZI-Skill 的 K 线 fallback 链，未使用 sqlite 缓存；成功 2 只，失败 0 只。",
+  "style_bias": [
+    "kline_test"
+  ],
+  "stocks": [
+    {
+      "symbol": "600900.SH",
+      "name": "长江电力",
+      "industry": "",
+      "factors": {
+        "close_above_ma20": true,
+        "ma20_up": false,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 2216297401.35,
+        "pct_change_20d": -0.012509197939661543
+      },
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.58
+      },
+      "core_reasons": [
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [],
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "factors": {
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 14346994754.5,
+        "pct_change_20d": 0.04721549636803868
+      },
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": [],
+        "quality_score": 0.58
+      },
+      "core_reasons": [
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [],
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    }
+  ],
+  "kline_enrichment": {
+    "source_chain": [
+      "akshare.stock_zh_a_hist",
+      "akshare.stock_zh_a_daily",
+      "sina.direct.kline",
+      "tencent.ifzq.kline"
+    ],
+    "source_counts": {
+      "akshare.stock_zh_a_daily": 2
+    },
+    "adjust": "qfq",
+    "start_date": "20250101",
+    "end_date": "20260420",
+    "uses_sqlite_cache": false,
+    "enriched": 2,
+    "failed": 0,
+    "failure_reasons": {}
+  }
+}

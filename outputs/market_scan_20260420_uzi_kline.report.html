@@ -1,0 +1,2531 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 股投资研究报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #d9dee7;
+      --accent: #1f6feb;
+      --good: #127c56;
+      --watch: #8a5a00;
+      --neutral: #52616f;
+      --bad: #b42318;
+      --soft: #fbfcfe;
+      --shadow: 0 10px 28px rgba(31, 41, 51, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 32px 20px 48px; }
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1 { font-size: 28px; line-height: 1.25; margin-bottom: 10px; }
+    h2 { font-size: 20px; margin-bottom: 4px; }
+    h3 { font-size: 18px; margin-bottom: 2px; }
+    h4 { font-size: 14px; margin: 16px 0 8px; color: var(--muted); }
+    .muted, .meta, .hero p, .panel-title p, .stock-card header p { color: var(--muted); }
+    .meta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 20px; }
+    .metric, .panel, .stock-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .metric { padding: 16px; }
+    .metric span { display: block; color: var(--muted); font-size: 13px; }
+    .metric strong { display: block; margin-top: 4px; font-size: 16px; word-break: break-word; }
+    .panel { padding: 20px; margin-bottom: 20px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 13px; font-weight: 600; background: #fafbfc; }
+    td span { color: var(--muted); font-size: 13px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .rating-strong { color: var(--good); background: #e8f7f0; border-color: #b8e6d0; }
+    .rating-watch { color: var(--accent); background: #eaf2ff; border-color: #bfd6ff; }
+    .rating-observe { color: var(--watch); background: #fff4d6; border-color: #f3d37a; }
+    .rating-neutral { color: var(--neutral); background: #eef1f5; border-color: #d7dde5; }
+    .rating-avoid { color: var(--bad); background: #fff0ee; border-color: #f3c1bc; }
+    .cards { display: grid; gap: 16px; }
+    .stock-card { padding: 20px; }
+    .stock-card header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    .stock-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; color: var(--muted); }
+    .stock-meta span { border: 1px solid var(--line); border-radius: 6px; padding: 6px 9px; background: var(--soft); }
+    .stock-meta strong { color: var(--text); }
+    .scores { display: grid; gap: 8px; margin: 14px 0 16px; }
+    .score-row { display: grid; grid-template-columns: 92px 1fr 44px; gap: 10px; align-items: center; }
+    .score-row span { color: var(--muted); font-size: 13px; }
+    .bar { height: 8px; border-radius: 999px; background: #e7ebf0; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: var(--accent); border-radius: inherit; }
+    .metric-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .metric-chips span { display: block; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--soft); }
+    .metric-chips em { display: block; font-style: normal; color: var(--muted); font-size: 12px; }
+    .metric-chips strong { display: block; margin-top: 2px; font-size: 13px; word-break: break-word; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    ol { margin: 0; padding-left: 20px; }
+    li { margin: 5px 0; }
+    .disclaimer {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: var(--soft);
+    }
+    @media (max-width: 860px) {
+      .metrics, .grid-2, .metric-chips { grid-template-columns: 1fr; }
+      .hero { padding: 22px; }
+      h1 { font-size: 24px; }
+      .score-row { grid-template-columns: 82px 1fr 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>A 股投资研究报告</h1>
+      <p>东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 与 UZI-Skill 的 K 线 fallback 链，未使用 sqlite 缓存；成功 30 只，失败 0 只。</p>
+      <div class="meta">
+        <span>数据截止日期：2026-04-20</span>
+        <span>任务类型：market_scan</span>
+        <span>股票池：002475.SZ, 300308.SZ, 300750.SZ, 300502.SZ, 300476.SZ, 002384.SZ, 300058.SZ, 300394.SZ, 600487.SH, 601138.SH, 300136.SZ, 000977.SZ, 000988.SZ, 688256.SH, 002837.SZ, 603083.SH, 603986.SH, 002281.SZ, 300274.SZ, 000547.SZ, 688525.SH, 002371.SZ, 000657.SZ, 601869.SH, 601899.SH, 600105.SH, 002428.SZ, 002463.SZ, 300857.SZ, 600879.SH</span>
+      </div>
+    </section>
+    
+    <section class="metrics" aria-label="报告摘要指标">
+      <div class="metric"><span>候选数量</span><strong>30</strong></div>
+      <div class="metric"><span>整体风险</span><strong>medium</strong></div>
+      <div class="metric"><span>数据来源</span><strong>tencent.qt.gtimg.cn, akshare.stock_zh_a_daily</strong></div>
+      <div class="metric"><span>评分版本</span><strong>ashare-research-signal-v1.1</strong></div>
+    </section>
+    
+    
+    <section class="panel">
+      <div class="panel-title">
+        <h2>候选排序</h2>
+        <p>按结构化信号文件中的排序展示，低置信结果仅代表初筛候选。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>股票</th>
+              <th>评级</th>
+              <th>评分</th>
+              <th>置信度</th>
+              <th>主要缺失字段</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>胜宏科技</strong><br><span>300476.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>70.17</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>2</td>
+              <td><strong>宁德时代</strong><br><span>300750.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>3</td>
+              <td><strong>新易盛</strong><br><span>300502.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>4</td>
+              <td><strong>天孚通信</strong><br><span>300394.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>5</td>
+              <td><strong>工业富联</strong><br><span>601138.SH</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>6</td>
+              <td><strong>浪潮信息</strong><br><span>000977.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>7</td>
+              <td><strong>英维克</strong><br><span>002837.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>8</td>
+              <td><strong>佰维存储</strong><br><span>688525.SH</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>9</td>
+              <td><strong>中钨高新</strong><br><span>000657.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>10</td>
+              <td><strong>沪电股份</strong><br><span>002463.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>68.38</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>11</td>
+              <td><strong>立讯精密</strong><br><span>002475.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>66.27</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>12</td>
+              <td><strong>光迅科技</strong><br><span>002281.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>66.27</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>13</td>
+              <td><strong>云南锗业</strong><br><span>002428.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>66.27</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>14</td>
+              <td><strong>华工科技</strong><br><span>000988.SZ</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>65.97</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>15</td>
+              <td><strong>寒武纪</strong><br><span>688256.SH</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>65.97</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>16</td>
+              <td><strong>兆易创新</strong><br><span>603986.SH</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>65.97</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>17</td>
+              <td><strong>航天电子</strong><br><span>600879.SH</span></td>
+              <td><span class="badge rating-observe">观察</span></td>
+              <td>65.97</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>18</td>
+              <td><strong>中际旭创</strong><br><span>300308.SZ</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>19</td>
+              <td><strong>东山精密</strong><br><span>002384.SZ</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>20</td>
+              <td><strong>亨通光电</strong><br><span>600487.SH</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>21</td>
+              <td><strong>长飞光纤</strong><br><span>601869.SH</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>22</td>
+              <td><strong>永鼎股份</strong><br><span>600105.SH</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>23</td>
+              <td><strong>协创数据</strong><br><span>300857.SZ</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>24</td>
+              <td><strong>北方华创</strong><br><span>002371.SZ</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>63.57</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>25</td>
+              <td><strong>紫金矿业</strong><br><span>601899.SH</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>60.57</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>26</td>
+              <td><strong>阳光电源</strong><br><span>300274.SZ</span></td>
+              <td><span class="badge rating-neutral">中性</span></td>
+              <td>55.17</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>27</td>
+              <td><strong>剑桥科技</strong><br><span>603083.SH</span></td>
+              <td><span class="badge rating-avoid">回避</span></td>
+              <td>60.67</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>28</td>
+              <td><strong>蓝色光标</strong><br><span>300058.SZ</span></td>
+              <td><span class="badge rating-avoid">回避</span></td>
+              <td>58.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>29</td>
+              <td><strong>信维通信</strong><br><span>300136.SZ</span></td>
+              <td><span class="badge rating-avoid">回避</span></td>
+              <td>58.88</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            
+            <tr>
+              <td>30</td>
+              <td><strong>航天发展</strong><br><span>000547.SZ</span></td>
+              <td><span class="badge rating-avoid">回避</span></td>
+              <td>51.07</td>
+              <td>0.58</td>
+              <td>roe_ttm, revenue_yoy, net_profit_yoy, pe_percentile_3y ...</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="cards">
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>胜宏科技</h3>
+                  <p>300476.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>70.17</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:100.0%"></i></div>
+              <strong>100</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>23.9%</strong></span><span><em>20日均额</em><strong>103.94 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>69.41</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 103.94 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>宁德时代</h3>
+                  <p>300750.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>4.7%</strong></span><span><em>20日均额</em><strong>143.47 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>24.99</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 143.47 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 24.99，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>新易盛</h3>
+                  <p>300502.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>22.2%</strong></span><span><em>20日均额</em><strong>179.33 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>77.07</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 179.33 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 77.07，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>天孚通信</h3>
+                  <p>300394.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>20.0%</strong></span><span><em>20日均额</em><strong>126.51 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>144.32</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 126.51 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 144.32，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>工业富联</h3>
+                  <p>601138.SH </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>22.3%</strong></span><span><em>20日均额</em><strong>88.54 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>34.59</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 88.54 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>浪潮信息</h3>
+                  <p>000977.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>22.9%</strong></span><span><em>20日均额</em><strong>39.93 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>44.50</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 39.93 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>英维克</h3>
+                  <p>002837.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>15.3%</strong></span><span><em>20日均额</em><strong>45.14 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>236.97</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 45.14 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>佰维存储</h3>
+                  <p>688525.SH </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>12.5%</strong></span><span><em>20日均额</em><strong>94.60 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>32.03</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 94.60 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 32.03，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>中钨高新</h3>
+                  <p>000657.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>16.9%</strong></span><span><em>20日均额</em><strong>39.99 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>104.16</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 39.99 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>沪电股份</h3>
+                  <p>002463.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>68.38</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>16.3%</strong></span><span><em>20日均额</em><strong>67.65 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>49.34</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 67.65 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 49.34，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>立讯精密</h3>
+                  <p>002475.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>66.27</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:87.0%"></i></div>
+              <strong>87</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>36.3%</strong></span><span><em>20日均额</em><strong>105.29 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>28.85</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 105.29 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 36.3%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>光迅科技</h3>
+                  <p>002281.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>66.27</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:87.0%"></i></div>
+              <strong>87</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>44.5%</strong></span><span><em>20日均额</em><strong>60.90 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>105.69</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 60.90 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 44.5%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>云南锗业</h3>
+                  <p>002428.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>66.27</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:87.0%"></i></div>
+              <strong>87</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>56.9%</strong></span><span><em>20日均额</em><strong>49.63 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>1066.40</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 49.63 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 56.9%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>华工科技</h3>
+                  <p>000988.SZ </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>65.97</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:86.0%"></i></div>
+              <strong>86</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>-0.9%</strong></span><span><em>20日均额</em><strong>104.58 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>否</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>78.61</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 104.58 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方，但20日均线斜率仍需继续确认。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 78.61，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>寒武纪</h3>
+                  <p>688256.SH </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>65.97</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:86.0%"></i></div>
+              <strong>86</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>34.5%</strong></span><span><em>20日均额</em><strong>93.24 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>282.23</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 93.24 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>兆易创新</h3>
+                  <p>603986.SH </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>65.97</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:86.0%"></i></div>
+              <strong>86</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>0.1%</strong></span><span><em>20日均额</em><strong>97.29 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>123.60</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 97.29 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>已记录PE-TTM快照约 123.60，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>航天电子</h3>
+                  <p>600879.SH </p>
+                </div>
+                <span class="badge rating-observe">观察</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>65.97</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 5.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:86.0%"></i></div>
+              <strong>86</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>18.1%</strong></span><span><em>20日均额</em><strong>31.65 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>371.10</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 31.65 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>中际旭创</h3>
+                  <p>300308.SZ </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>38.9%</strong></span><span><em>20日均额</em><strong>193.74 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>63.18</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 193.74 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 63.18，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 38.9%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>东山精密</h3>
+                  <p>002384.SZ </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>35.3%</strong></span><span><em>20日均额</em><strong>99.12 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>216.35</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 99.12 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 216.35，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 35.3%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>亨通光电</h3>
+                  <p>600487.SH </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>41.7%</strong></span><span><em>20日均额</em><strong>88.12 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>53.07</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 88.12 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 53.07，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 41.7%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>长飞光纤</h3>
+                  <p>601869.SH </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>77.5%</strong></span><span><em>20日均额</em><strong>63.03 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>391.70</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 63.03 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 391.70，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 77.5%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>永鼎股份</h3>
+                  <p>600105.SH </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>51.1%</strong></span><span><em>20日均额</em><strong>55.31 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>183.40</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 55.31 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 183.40，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 51.1%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>协创数据</h3>
+                  <p>300857.SZ </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <strong>79</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>40.5%</strong></span><span><em>20日均额</em><strong>39.93 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>91.55</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 39.93 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>已记录PE-TTM快照约 91.55，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>近20日涨幅约 40.5%，短期追高和交易拥挤风险上升。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>高位继续放量但价格不能创新高，说明交易拥挤开始反噬。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>北方华创</h3>
+                  <p>002371.SZ </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>63.57</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:78.0%"></i></div>
+              <strong>78</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>0.5%</strong></span><span><em>20日均额</em><strong>36.63 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>61.86</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 36.63 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>已记录PE-TTM快照约 61.86，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>紫金矿业</h3>
+                  <p>601899.SH </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>60.57</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:68.0%"></i></div>
+              <strong>68</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>10.0%</strong></span><span><em>20日均额</em><strong>92.43 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>否</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>17.88</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 92.43 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>已记录PE-TTM快照约 17.88，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>价格尚未站上60日均线，中期趋势仍未确认。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>阳光电源</h3>
+                  <p>300274.SZ </p>
+                </div>
+                <span class="badge rating-neutral">中性</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>55.17</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 3.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:74.5%"></i></div>
+              <strong>74.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>-22.1%</strong></span><span><em>20日均额</em><strong>115.71 亿元</strong></span><span><em>价格站上20日线</em><strong>否</strong></span><span><em>20日线向上</em><strong>否</strong></span><span><em>价格站上60日线</em><strong>否</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>20.82</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 115.71 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>已记录PE-TTM快照约 20.82，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>价格尚未站上60日均线，中期趋势仍未确认。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格重新站上20日均线并连续维持，短线趋势才算重新生效。</li><li>价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>剑桥科技</h3>
+                  <p>603083.SH </p>
+                </div>
+                <span class="badge rating-avoid">回避</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>60.67</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 0.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:100.0%"></i></div>
+              <strong>100</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:64.5%"></i></div>
+              <strong>64.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>32.1%</strong></span><span><em>20日均额</em><strong>36.03 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>是</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>203.84</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 36.03 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格站上60日均线且20日均线高于60日均线，中期结构相对占优。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。</li><li>短期涨幅或换手过高，存在交易拥挤风险。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>蓝色光标</h3>
+                  <p>300058.SZ </p>
+                </div>
+                <span class="badge rating-avoid">回避</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>58.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 0.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:64.5%"></i></div>
+              <strong>64.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>34.6%</strong></span><span><em>20日均额</em><strong>68.41 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>312.09</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 68.41 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。</li><li>短期涨幅或换手过高，存在交易拥挤风险。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>信维通信</h3>
+                  <p>300136.SZ </p>
+                </div>
+                <span class="badge rating-avoid">回避</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>58.88</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 0.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:94.0%"></i></div>
+              <strong>94</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:64.5%"></i></div>
+              <strong>64.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>24.3%</strong></span><span><em>20日均额</em><strong>54.29 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>是</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>是</strong></span><span><em>PE-TTM快照</em><strong>102.27</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 54.29 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>价格位于60日均线上方，中期趋势尚未明显转弱。</li><li>出现20日区间突破信号，说明短期资金推动力度较前期增强。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。</li><li>短期涨幅或换手过高，存在交易拥挤风险。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格不有效跌破60日均线，中期结构保持不破坏。</li><li>突破后回踩不跌回突破区间，且不出现明显放量滞涨。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            
+            <article class="stock-card">
+              <header>
+                <div>
+                  <h3>航天发展</h3>
+                  <p>000547.SZ </p>
+                </div>
+                <span class="badge rating-avoid">回避</span>
+              </header>
+              <div class="stock-meta">
+                <span>综合评分 <strong>51.07</strong></span>
+                <span>置信度 <strong>0.58</strong></span>
+                <span>仓位参考 <strong>0.0% - 0.0%</strong></span>
+              </div>
+              <div class="scores">
+            <div class="score-row">
+              <span>趋势与量价</span>
+              <div class="bar"><i style="width:68.0%"></i></div>
+              <strong>68</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>基本面质量</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>估值水平</span>
+              <div class="bar"><i style="width:50.0%"></i></div>
+              <strong>50</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>公告/事件</span>
+              <div class="bar"><i style="width:60.0%"></i></div>
+              <strong>60</strong>
+            </div>
+            
+            <div class="score-row">
+              <span>风险因子</span>
+              <div class="bar"><i style="width:64.5%"></i></div>
+              <strong>64.5</strong>
+            </div>
+            </div>
+              <section>
+                <h4>关键指标</h4>
+                <div class="metric-chips"><span><em>K线来源</em><strong>akshare.stock_zh_a_daily，80 条，2025-12-17 至 2026-04-20</strong></span><span><em>20日涨跌幅</em><strong>2.7%</strong></span><span><em>20日均额</em><strong>51.11 亿元</strong></span><span><em>价格站上20日线</em><strong>是</strong></span><span><em>20日线向上</em><strong>是</strong></span><span><em>价格站上60日线</em><strong>否</strong></span><span><em>20日线高于60日线</em><strong>否</strong></span><span><em>20日突破</em><strong>否</strong></span><span><em>PE-TTM快照</em><strong>-28.66</strong></span></div>
+              </section>
+              <div class="grid-2">
+                <section>
+                  <h4>核心理由</h4>
+                  <ol><li>近20日平均成交额约 51.11 亿元，满足本轮高流动性初筛要求。</li><li>K线趋势已由 akshare.stock_zh_a_daily 补充，覆盖 80 条记录，本轮不再仅依赖腾讯基础行情快照。</li><li>价格位于20日均线上方且20日均线向上，短线趋势结构偏强。</li><li>已记录PE-TTM快照约 -28.66，可作为后续估值分位复核的基准。</li></ol>
+                </section>
+                <section>
+                  <h4>主要风险</h4>
+                  <ol><li>基本面字段仍不完整，ROE、营收增速或净利润增速缺失会降低盈利质量判断的可靠性。</li><li>估值分位缺失，当前只能使用PE快照，无法判断估值处于历史高位还是低位。</li><li>公告/事件数据缺失，尚未排查减持、问询、处罚、业绩预告等事件冲击。</li><li>换手率或短期成交热度偏高，需警惕放量滞涨后的波动放大。</li><li>价格尚未站上60日均线，中期趋势仍未确认。</li></ol>
+                </section>
+              </div>
+              <div class="grid-2">
+                <section>
+                  <h4>生效条件</h4>
+                  <ol><li>价格继续站稳20日均线，且20日均线不由升转降。</li><li>价格站上60日均线并获得成交额配合后，中期信号才具备更高可信度。</li><li>补齐基本面、估值分位和公告数据后，未触发风险降级或回避规则。</li><li>市场风格未从高流动性成长/主题交易显著切换到防御或低波动风格。</li></ol>
+                </section>
+                <section>
+                  <h4>失效条件</h4>
+                  <ol><li>跌破20日均线且成交额放大，短线趋势信号失效。</li><li>有效跌破60日均线，或20日均线下穿60日均线，中期结构转弱。</li><li>补充财务、估值分位或公告后出现负面结论，当前初筛评级需下调。</li><li>成交额明显萎缩导致流动性初筛条件不再满足。</li><li>出现重大负面公告、监管处罚或退市风险提示。</li></ol>
+                </section>
+              </div>
+            </article>
+            </section>
+    <section class="disclaimer">
+      <strong>合规提示</strong>
+      <p>本结果基于公开数据和规则化评分模型生成，仅用于投资研究辅助，不构成收益承诺、买卖建议或个性化投顾服务。</p>
+      <p>本 HTML 报告仅根据同名结构化 JSON 文件生成，未额外新增未经记录的数据事实。</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,3601 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "002475.SZ",
+      "300308.SZ",
+      "300750.SZ",
+      "300502.SZ",
+      "300476.SZ",
+      "002384.SZ",
+      "300058.SZ",
+      "300394.SZ",
+      "600487.SH",
+      "601138.SH",
+      "300136.SZ",
+      "000977.SZ",
+      "000988.SZ",
+      "688256.SH",
+      "002837.SZ",
+      "603083.SH",
+      "603986.SH",
+      "002281.SZ",
+      "300274.SZ",
+      "000547.SZ",
+      "688525.SH",
+      "002371.SZ",
+      "000657.SZ",
+      "601869.SH",
+      "601899.SH",
+      "600105.SH",
+      "002428.SZ",
+      "002463.SZ",
+      "300857.SZ",
+      "600879.SH"
+    ],
+    "filters": {
+      "exclude_st": true,
+      "min_amount": 1000000000.0,
+      "source": "tencent.qt.gtimg.cn",
+      "fallback_path": [
+        "eastmoney_push2_failed",
+        "xueqiu_failed",
+        "tencent_used"
+      ]
+    }
+  },
+  "data_sources": [
+    "tencent.qt.gtimg.cn",
+    "akshare.stock_zh_a_daily",
+    "akshare.stock_financial_analysis_indicator",
+    "akshare.stock_zh_valuation_baidu"
+  ],
+  "market_view": "东方财富 push2 和雪球当前不可用，已降级使用腾讯基础行情备源完成流动性初筛；结果不等同于完整多维研究。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 与 UZI-Skill 的 K 线 fallback 链，未使用 sqlite 缓存；成功 30 只，失败 0 只。 已尝试使用 AkShare 补充基本面字段和近三年估值分位；基本面成功 26 只，估值成功 30 只。",
+  "style_bias": [
+    "流动性",
+    "备源行情初筛"
+  ],
+  "stocks": [
+    {
+      "symbol": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.363127333056823,
+        "pe_ttm_snapshot": 28.85,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": true,
+        "amount_ma20": 10528871324.65,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.1955,
+        "revenue_yoy": 0.236425,
+        "net_profit_yoy": 0.246326,
+        "net_margin": 0.054673,
+        "ocf_to_net_profit": 0.9535,
+        "debt_to_asset": 0.660661,
+        "eps": 2.26,
+        "bps": 14.2771,
+        "pe_ttm": 28.85,
+        "pe_percentile_3y": 0.9662,
+        "pb_lf": 5.67,
+        "pb_percentile_3y": 0.9662
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300308.SZ",
+      "name": "中际旭创",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.38888888888888884,
+        "pe_ttm_snapshot": 63.18,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 19373920923.6,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.1611,
+        "revenue_yoy": 1.921169,
+        "net_profit_yoy": 2.7366070000000002,
+        "net_margin": 0.323998,
+        "ocf_to_net_profit": 0.5331,
+        "debt_to_asset": 0.32636200000000004,
+        "eps": 5.14,
+        "bps": 34.3032,
+        "pe_ttm": 63.18,
+        "pe_percentile_3y": 0.7172,
+        "pb_lf": 26.54,
+        "pb_percentile_3y": 0.9854
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.04721549636803868,
+        "pe_ttm_snapshot": 24.99,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 14346994754.5,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.057999999999999996,
+        "revenue_yoy": 0.524487,
+        "net_profit_yoy": 0.52993,
+        "net_margin": 0.176079,
+        "ocf_to_net_profit": 1.4813,
+        "debt_to_asset": 0.623223,
+        "eps": 4.58,
+        "bps": 86.3775,
+        "pe_ttm": 24.99,
+        "pe_percentile_3y": 0.7454,
+        "pb_lf": 5.53,
+        "pb_percentile_3y": 0.8522
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300502.SZ",
+      "name": "新易盛",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.22209412011319563,
+        "pe_ttm_snapshot": 77.07,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 17932721045.95,
+        "report_period": "2025-09-30",
+        "roe_ttm": 0.43560000000000004,
+        "revenue_yoy": 2.217035,
+        "net_profit_yoy": 2.84375,
+        "net_margin": 0.383349,
+        "ocf_to_net_profit": 0.7329,
+        "debt_to_asset": 0.31992,
+        "eps": 6.37,
+        "bps": 14.6121,
+        "pe_ttm": 77.07,
+        "pe_percentile_3y": 0.9261,
+        "pb_lf": 39.9,
+        "pb_percentile_3y": 0.9973
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300476.SZ",
+      "name": "胜宏科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.23858014660744598,
+        "pe_ttm_snapshot": 69.41,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": true,
+        "amount_ma20": 10393980376.2,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.2595,
+        "revenue_yoy": 0.797733,
+        "net_profit_yoy": 2.735163,
+        "net_margin": 0.22350799999999998,
+        "ocf_to_net_profit": 1.0674,
+        "debt_to_asset": 0.528505,
+        "eps": 5.0,
+        "bps": 19.093,
+        "pe_ttm": 69.41,
+        "pe_percentile_3y": 0.8631,
+        "pb_lf": 18.01,
+        "pb_percentile_3y": 0.9243
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002384.SZ",
+      "name": "东山精密",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.3527485783215578,
+        "pe_ttm_snapshot": 216.35,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 9911606647.2,
+        "report_period": "2025-09-30",
+        "roe_ttm": 0.0574,
+        "revenue_yoy": 0.022834,
+        "net_profit_yoy": 0.146902,
+        "net_margin": 0.045198999999999996,
+        "ocf_to_net_profit": 2.4076,
+        "debt_to_asset": 0.588226,
+        "eps": 0.7,
+        "bps": 11.6667,
+        "pe_ttm": 216.35,
+        "pe_percentile_3y": 0.9973,
+        "pb_lf": 13.5,
+        "pb_percentile_3y": 0.9973
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300058.SZ",
+      "name": "蓝色光标",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.3459682977257066,
+        "pe_ttm_snapshot": 312.09,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 6840671603.7,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.0285,
+        "revenue_yoy": 0.129871,
+        "net_margin": 0.0032440000000000004,
+        "ocf_to_net_profit": 2.8343,
+        "debt_to_asset": 0.6859839999999999,
+        "eps": 0.063,
+        "bps": 2.1988,
+        "pe_ttm": 312.09,
+        "pe_percentile_3y": 0.6122,
+        "pb_lf": 8.88,
+        "pb_percentile_3y": 0.9836
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300394.SZ",
+      "name": "天孚通信",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.20032051282051277,
+        "pe_ttm_snapshot": 144.33,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 12651226066.8,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.0823,
+        "revenue_yoy": 0.408243,
+        "net_profit_yoy": 0.457588,
+        "net_margin": 0.37005299999999997,
+        "ocf_to_net_profit": 0.3703,
+        "debt_to_asset": 0.14254,
+        "eps": 0.6309,
+        "bps": 7.7005,
+        "pe_ttm": 144.33,
+        "pe_percentile_3y": 0.99,
+        "pb_lf": 52.88,
+        "pb_percentile_3y": 0.9818
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "600487.SH",
+      "name": "亨通光电",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.41670544439274093,
+        "pe_ttm_snapshot": 53.07,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 8811575349.05,
+        "report_period": "2025-09-30",
+        "roe_ttm": 0.07719999999999999,
+        "revenue_yoy": 0.17031300000000002,
+        "net_profit_yoy": 0.013429,
+        "net_margin": 0.051131,
+        "ocf_to_net_profit": 0.1944,
+        "debt_to_asset": 0.536883,
+        "eps": 0.98,
+        "bps": 13.501,
+        "pe_ttm": 53.07,
+        "pe_percentile_3y": 1.0,
+        "pb_lf": 4.88,
+        "pb_percentile_3y": 1.0
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "601138.SH",
+      "name": "工业富联",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.2228628230616303,
+        "pe_ttm_snapshot": 34.59,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 8853548376.15,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.2116,
+        "revenue_yoy": 0.482244,
+        "net_profit_yoy": 0.519202,
+        "net_margin": 0.039129,
+        "ocf_to_net_profit": 0.1483,
+        "debt_to_asset": 0.633701,
+        "eps": 1.78,
+        "bps": 8.4154,
+        "pe_ttm": 34.59,
+        "pe_percentile_3y": 0.8203,
+        "pb_lf": 7.32,
+        "pb_percentile_3y": 0.8823
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300136.SZ",
+      "name": "信维通信",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.2428115015974439,
+        "pe_ttm_snapshot": 102.27,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 5428890597.85,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.0131,
+        "revenue_yoy": 0.14305199999999998,
+        "net_profit_yoy": 0.417213,
+        "net_margin": 0.052649,
+        "ocf_to_net_profit": 0.7722,
+        "debt_to_asset": 0.432391,
+        "eps": 0.1088,
+        "bps": 8.2921,
+        "pe_ttm": 102.27,
+        "pe_percentile_3y": 0.9334,
+        "pb_lf": 9.38,
+        "pb_percentile_3y": 0.9626
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "000977.SZ",
+      "name": "浪潮信息",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.2289075630252102,
+        "pe_ttm_snapshot": 44.5,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 3993114486.6,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.1109,
+        "revenue_yoy": 0.435791,
+        "net_profit_yoy": 0.052065,
+        "net_margin": 0.01462,
+        "ocf_to_net_profit": 2.2636,
+        "debt_to_asset": 0.7363580000000001,
+        "eps": 1.639,
+        "bps": 15.0438,
+        "pe_ttm": 44.5,
+        "pe_percentile_3y": 0.9635,
+        "pb_lf": 4.93,
+        "pb_percentile_3y": 0.9562
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "000988.SZ",
+      "name": "华工科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.009476223294279773,
+        "pe_ttm_snapshot": 78.61,
+        "close_above_ma20": true,
+        "ma20_up": false,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 10457999572.45,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.133,
+        "revenue_yoy": 0.225941,
+        "net_profit_yoy": 0.208948,
+        "net_margin": 0.10132300000000001,
+        "ocf_to_net_profit": 0.8395,
+        "debt_to_asset": 0.514063,
+        "eps": 1.47,
+        "bps": 11.0762,
+        "pe_ttm": 78.61,
+        "pe_percentile_3y": 0.9909,
+        "pb_lf": 10.46,
+        "pb_percentile_3y": 0.9772
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "688256.SH",
+      "name": "寒武纪",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.3445853658536586,
+        "pe_ttm_snapshot": 282.23,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 9323781041.9,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.174,
+        "revenue_yoy": 4.53205,
+        "net_margin": 0.316827,
+        "ocf_to_net_profit": -0.2421,
+        "debt_to_asset": 0.11865600000000001,
+        "eps": 4.88,
+        "bps": 28.0855,
+        "pe_ttm": 282.23,
+        "pe_percentile_3y": 0.2289,
+        "pb_lf": 49.1,
+        "pb_percentile_3y": 0.7427
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002837.SZ",
+      "name": "英维克",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.15314285714285703,
+        "pe_ttm_snapshot": 236.97,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 4513795150.2,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.0025,
+        "revenue_yoy": 0.260291,
+        "net_profit_yoy": -0.7395999999999999,
+        "net_margin": 0.012049,
+        "ocf_to_net_profit": -0.272835,
+        "debt_to_asset": 0.551085,
+        "eps": 0.01,
+        "bps": 3.5648,
+        "pe_ttm": 236.97,
+        "pe_percentile_3y": 1.0,
+        "pb_lf": 35.69,
+        "pb_percentile_3y": 1.0
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "603083.SH",
+      "name": "剑桥科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.3205583976415505,
+        "pe_ttm_snapshot": 203.84,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": true,
+        "amount_ma20": 3603422966.2,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.0354,
+        "revenue_yoy": 0.320739,
+        "net_profit_yoy": 0.33258899999999997,
+        "net_margin": 0.046148999999999996,
+        "ocf_to_net_profit": -2.1144,
+        "debt_to_asset": 0.36511899999999997,
+        "eps": 0.94,
+        "bps": 21.4343,
+        "pe_ttm": 203.84,
+        "pe_percentile_3y": 0.9352,
+        "pb_lf": 7.21,
+        "pb_percentile_3y": 0.7035
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "603986.SH",
+      "name": "兆易创新",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0011716057891111298,
+        "pe_ttm_snapshot": 123.6,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": false,
+        "amount_ma20": 9729369027.7,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.0867,
+        "revenue_yoy": 0.251154,
+        "net_profit_yoy": 0.5236379999999999,
+        "net_margin": 0.18225100000000002,
+        "ocf_to_net_profit": 1.269,
+        "debt_to_asset": 0.101593,
+        "eps": 2.47,
+        "bps": 28.7832,
+        "pe_ttm": 123.6,
+        "pe_percentile_3y": 0.5255,
+        "pb_lf": 10.72,
+        "pb_percentile_3y": 0.9453
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002281.SZ",
+      "name": "光迅科技",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.4449927780452576,
+        "pe_ttm_snapshot": 105.69,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": true,
+        "amount_ma20": 6089760647.5,
+        "report_period": "2025-09-30",
+        "roe_ttm": 0.0735,
+        "revenue_yoy": 0.58646,
+        "net_profit_yoy": 0.537025,
+        "net_margin": 0.08168900000000001,
+        "ocf_to_net_profit": 1.5445,
+        "debt_to_asset": 0.399383,
+        "eps": 0.91,
+        "bps": 12.1824,
+        "pe_ttm": 105.69,
+        "pe_percentile_3y": 1.0,
+        "pb_lf": 9.91,
+        "pb_percentile_3y": 1.0
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300274.SZ",
+      "name": "阳光电源",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": -0.2211981566820277,
+        "pe_ttm_snapshot": 20.82,
+        "close_above_ma20": false,
+        "ma20_up": false,
+        "close_above_ma60": false,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": false,
+        "amount_ma20": 11571006648.15,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.2888,
+        "revenue_yoy": 0.14549,
+        "net_profit_yoy": 0.201401,
+        "net_margin": 0.15173999999999999,
+        "ocf_to_net_profit": 1.2501,
+        "debt_to_asset": 0.580619,
+        "eps": 6.53,
+        "bps": 24.0071,
+        "pe_ttm": 20.82,
+        "pe_percentile_3y": 0.7327,
+        "pb_lf": 6.01,
+        "pb_percentile_3y": 0.635
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "价格仍低于 60 日均线，中期趋势确认不足。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "000547.SZ",
+      "name": "航天发展",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": true,
+        "pct_change_20d": 0.02678571428571419,
+        "pe_ttm_snapshot": 467.38,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": false,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": false,
+        "amount_ma20": 5111307410.35,
+        "report_period": "2025-09-30",
+        "roe_ttm": -0.10400000000000001,
+        "revenue_yoy": 0.425944,
+        "net_margin": -0.32271299999999997,
+        "debt_to_asset": 0.46334899999999996,
+        "eps": -0.31,
+        "bps": 3.4312,
+        "pe_ttm": 467.38,
+        "pe_percentile_3y": 0.625,
+        "pb_lf": 9.78,
+        "pb_percentile_3y": 0.9489
+      },
+      "events": [],
+      "risk_flags": [
+        "overheated_turnover"
+      ],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "价格仍低于 60 日均线，中期趋势确认不足。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "688525.SH",
+      "name": "佰维存储",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.12483255190890818,
+        "pe_ttm_snapshot": 32.03,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 9460467715.8,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.3406,
+        "revenue_yoy": 3.41528,
+        "net_margin": 0.422224,
+        "ocf_to_net_profit": -0.9407,
+        "debt_to_asset": 0.649551,
+        "eps": 5.96,
+        "bps": 18.365,
+        "pe_ttm": 32.03,
+        "pe_percentile_3y": 0.0042,
+        "pb_lf": 14.86,
+        "pb_percentile_3y": 0.8239
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002371.SZ",
+      "name": "北方华创",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.0053550093872674065,
+        "pe_ttm_snapshot": 61.86,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": false,
+        "amount_ma20": 3662688248.85,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.1464,
+        "revenue_yoy": 0.318889,
+        "net_profit_yoy": -0.050015000000000004,
+        "net_margin": 0.137445,
+        "ocf_to_net_profit": 0.3944,
+        "debt_to_asset": 0.510832,
+        "eps": 7.6404,
+        "bps": 60.6225,
+        "pe_ttm": 61.86,
+        "pe_percentile_3y": 0.9808,
+        "pb_lf": 9.05,
+        "pb_percentile_3y": 0.8677
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "000657.SZ",
+      "name": "中钨高新",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.16869634657616284,
+        "pe_ttm_snapshot": 104.16,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 3999149224.1,
+        "report_period": "2025-09-30",
+        "roe_ttm": 0.0857,
+        "revenue_yoy": 0.24701399999999998,
+        "net_profit_yoy": 2.5500659999999997,
+        "net_margin": 0.073045,
+        "ocf_to_net_profit": -0.0243,
+        "debt_to_asset": 0.486167,
+        "eps": 0.3821,
+        "bps": 4.6859,
+        "pe_ttm": 104.16,
+        "pe_percentile_3y": 1.0,
+        "pb_lf": 13.51,
+        "pb_percentile_3y": 0.9854
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "601869.SH",
+      "name": "长飞光纤",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.7751752120988566,
+        "pe_ttm_snapshot": 391.7,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 6303346783.25,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.058899999999999994,
+        "revenue_yoy": 0.16845300000000002,
+        "net_profit_yoy": 0.51734,
+        "net_margin": 0.061883,
+        "ocf_to_net_profit": 4.1418,
+        "debt_to_asset": 0.511232,
+        "eps": 1.07,
+        "bps": 21.4674,
+        "pe_ttm": 391.7,
+        "pe_percentile_3y": 0.9982,
+        "pb_lf": 23.09,
+        "pb_percentile_3y": 0.9991
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.10015797788309633,
+        "pe_ttm_snapshot": 17.88,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": false,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": false,
+        "amount_ma20": 9242566378.7,
+        "report_period": "2025-12-31",
+        "roe_ttm": 0.2791,
+        "revenue_yoy": 0.149648,
+        "net_profit_yoy": 0.620146,
+        "net_margin": 0.18283000000000002,
+        "ocf_to_net_profit": 1.1819,
+        "debt_to_asset": 0.515586,
+        "eps": 1.91,
+        "bps": 9.3278,
+        "pe_ttm": 17.88,
+        "pe_percentile_3y": 0.656,
+        "pb_lf": 5.03,
+        "pb_percentile_3y": 0.8969
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "价格仍低于 60 日均线，中期趋势确认不足。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "600105.SH",
+      "name": "永鼎股份",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.5112075198843093,
+        "pe_ttm_snapshot": 183.4,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 5531304998.65,
+        "report_period": "2026-03-31",
+        "roe_ttm": 0.0479,
+        "revenue_yoy": 0.41916600000000004,
+        "net_profit_yoy": -0.48353700000000005,
+        "net_margin": 0.1184,
+        "ocf_to_net_profit": 1.7546,
+        "debt_to_asset": 0.625586,
+        "eps": 0.1086,
+        "bps": 2.4714,
+        "pe_ttm": 183.4,
+        "pe_percentile_3y": 0.833,
+        "pb_lf": 18.52,
+        "pb_percentile_3y": 1.0
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "announcements"
+        ],
+        "quality_score": 0.78
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002428.SZ",
+      "name": "云南锗业",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.5692590888173032,
+        "pe_ttm_snapshot": 1066.4,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": true,
+        "amount_ma20": 4962681770.1,
+        "pe_ttm": 1066.4,
+        "pe_percentile_3y": 0.7353,
+        "pb_lf": 30.6,
+        "pb_percentile_3y": 1.0
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "002463.SZ",
+      "name": "沪电股份",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.16251482799525507,
+        "pe_ttm_snapshot": 49.34,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 6765464698.8,
+        "pe_ttm": 49.34,
+        "pe_percentile_3y": 1.0,
+        "pb_lf": 12.48,
+        "pb_percentile_3y": 0.9991
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "300857.SZ",
+      "name": "协创数据",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.40474344355758274,
+        "pe_ttm_snapshot": 91.55,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": true,
+        "ma20_above_ma60": true,
+        "breakout_20d": false,
+        "amount_ma20": 3993168060.15,
+        "pe_ttm": 91.55,
+        "pe_percentile_3y": 0.9617,
+        "pb_lf": 24.28,
+        "pb_percentile_3y": 0.9964
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格位于 60 日均线上方，短中期结构相对更稳。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。",
+        "近 20 日涨幅较高，需警惕短期交易拥挤。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    },
+    {
+      "symbol": "600879.SH",
+      "name": "航天电子",
+      "industry": "",
+      "factors": {
+        "severe_illiquidity": false,
+        "overheated_turnover": false,
+        "pct_change_20d": 0.1813975011568718,
+        "pe_ttm_snapshot": 371.1,
+        "close_above_ma20": true,
+        "ma20_up": true,
+        "close_above_ma60": true,
+        "ma60_up": false,
+        "ma20_above_ma60": false,
+        "breakout_20d": true,
+        "amount_ma20": 3165287919.6,
+        "pe_ttm": 371.1,
+        "pe_percentile_3y": 0.9343,
+        "pb_lf": 4.04,
+        "pb_percentile_3y": 0.958
+      },
+      "events": [],
+      "risk_flags": [],
+      "core_reasons": [
+        "腾讯行情备源显示成交额满足流动性初筛条件。",
+        "20 日均线趋势改善，价格位于短期均线上方。",
+        "价格接近或突破近 20 日高点。"
+      ],
+      "risks": [
+        "当前为腾讯基础行情备源初筛，缺少完整基本面、估值分位、K 线趋势和公告事件验证。"
+      ],
+      "invalid_conditions": [
+        "补充主源数据后基本面、估值或公告风险显著上升。",
+        "后续成交额明显萎缩或价格趋势转弱。",
+        "出现 ST、退市风险或重大负面公告。"
+      ],
+      "data_quality": {
+        "missing_fields": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ],
+        "quality_score": 0.68
+      },
+      "kline_source": {
+        "source": "akshare.stock_zh_a_daily",
+        "adjust": "qfq",
+        "start_date": "2025-12-17",
+        "end_date": "2026-04-20",
+        "rows": 80,
+        "uses_sqlite_cache": false
+      }
+    }
+  ],
+  "kline_enrichment": {
+    "source_chain": [
+      "akshare.stock_zh_a_hist",
+      "akshare.stock_zh_a_daily",
+      "sina.direct.kline",
+      "tencent.ifzq.kline"
+    ],
+    "source_counts": {
+      "akshare.stock_zh_a_daily": 30
+    },
+    "adjust": "qfq",
+    "start_date": "20250101",
+    "end_date": "20260420",
+    "uses_sqlite_cache": false,
+    "enriched": 30,
+    "failed": 0,
+    "failure_reasons": {}
+  },
+  "fundamental_valuation_enrichment": {
+    "as_of": "2026-04-20",
+    "fundamental_source": "akshare.stock_financial_analysis_indicator",
+    "valuation_source": "akshare.stock_zh_valuation_baidu",
+    "valuation_method": "latest positive PE-TTM/PB value percentile rank within the recent three-year series up to as_of",
+    "enriched_fundamental": 26,
+    "enriched_valuation": 30,
+    "audits": [
+      {
+        "symbol": "002475.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 28.85,
+            "percentile": 0.9662
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 5.67,
+            "percentile": 0.9662
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300308.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 63.18,
+            "percentile": 0.7172
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 26.54,
+            "percentile": 0.9854
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300750.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 24.99,
+            "percentile": 0.7454
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 5.53,
+            "percentile": 0.8522
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300502.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 77.07,
+            "percentile": 0.9261
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 39.9,
+            "percentile": 0.9973
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300476.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 69.41,
+            "percentile": 0.8631
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 18.01,
+            "percentile": 0.9243
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002384.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 216.35,
+            "percentile": 0.9973
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 13.5,
+            "percentile": 0.9973
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300058.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 196,
+            "current": 312.09,
+            "percentile": 0.6122
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 8.88,
+            "percentile": 0.9836
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300394.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 144.33,
+            "percentile": 0.99
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 52.88,
+            "percentile": 0.9818
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "600487.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 53.07,
+            "percentile": 1.0
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 4.88,
+            "percentile": 1.0
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "601138.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 34.59,
+            "percentile": 0.8203
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 7.32,
+            "percentile": 0.8823
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300136.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 102.27,
+            "percentile": 0.9334
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 9.38,
+            "percentile": 0.9626
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "000977.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 44.5,
+            "percentile": 0.9635
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 4.93,
+            "percentile": 0.9562
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "000988.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 78.61,
+            "percentile": 0.9909
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 10.46,
+            "percentile": 0.9772
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "688256.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 367,
+            "current": 282.23,
+            "percentile": 0.2289
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 49.1,
+            "percentile": 0.7427
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002837.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 236.97,
+            "percentile": 1.0
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 35.69,
+            "percentile": 1.0
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "603083.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 203.84,
+            "percentile": 0.9352
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 7.21,
+            "percentile": 0.7035
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "603986.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 123.6,
+            "percentile": 0.5255
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 10.72,
+            "percentile": 0.9453
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002281.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 105.69,
+            "percentile": 1.0
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 9.91,
+            "percentile": 1.0
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300274.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 20.82,
+            "percentile": 0.7327
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 6.01,
+            "percentile": 0.635
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "000547.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2023-04-28",
+            "rows": 8,
+            "current": 467.38,
+            "percentile": 0.625
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 9.78,
+            "percentile": 0.9489
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "688525.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 237,
+            "current": 32.03,
+            "percentile": 0.0042
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 14.86,
+            "percentile": 0.8239
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002371.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 61.86,
+            "percentile": 0.9808
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 9.05,
+            "percentile": 0.8677
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "000657.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-09-30",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 104.16,
+            "percentile": 1.0
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 13.51,
+            "percentile": 0.9854
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "601869.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 391.7,
+            "percentile": 0.9982
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 23.09,
+            "percentile": 0.9991
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "601899.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2025-12-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 17.88,
+            "percentile": 0.656
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 5.03,
+            "percentile": 0.8969
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "600105.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": true,
+          "error": "",
+          "report_period": "2026-03-31",
+          "fields": [
+            "bps",
+            "debt_to_asset",
+            "eps",
+            "net_margin",
+            "net_profit_yoy",
+            "ocf_to_net_profit",
+            "report_period",
+            "revenue_yoy",
+            "roe_ttm"
+          ]
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 183.4,
+            "percentile": 0.833
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 18.52,
+            "percentile": 1.0
+          }
+        },
+        "filled_fields": [
+          "bps",
+          "debt_to_asset",
+          "eps",
+          "net_margin",
+          "net_profit_yoy",
+          "ocf_to_net_profit",
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm",
+          "report_period",
+          "revenue_yoy",
+          "roe_ttm"
+        ],
+        "missing_fields_after": [
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002428.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": false,
+          "error": "OSError:[Errno 22] Invalid argument"
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 763,
+            "current": 1066.4,
+            "percentile": 0.7353
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 30.6,
+            "percentile": 1.0
+          }
+        },
+        "filled_fields": [
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm"
+        ],
+        "missing_fields_after": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "002463.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": false,
+          "error": "OSError:[Errno 22] Invalid argument"
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 49.34,
+            "percentile": 1.0
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 12.48,
+            "percentile": 0.9991
+          }
+        },
+        "filled_fields": [
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm"
+        ],
+        "missing_fields_after": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "300857.SZ",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": false,
+          "error": "OSError:[Errno 22] Invalid argument"
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 91.55,
+            "percentile": 0.9617
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 24.28,
+            "percentile": 0.9964
+          }
+        },
+        "filled_fields": [
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm"
+        ],
+        "missing_fields_after": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ]
+      },
+      {
+        "symbol": "600879.SH",
+        "fundamental": {
+          "source": "akshare.stock_financial_analysis_indicator",
+          "ok": false,
+          "error": "OSError:[Errno 22] Invalid argument"
+        },
+        "valuation": {
+          "pe_ttm": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市盈率(TTM)",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 371.1,
+            "percentile": 0.9343
+          },
+          "pb_lf": {
+            "source": "akshare.stock_zh_valuation_baidu",
+            "indicator": "市净率",
+            "ok": true,
+            "error": "",
+            "latest_date": "2026-04-20",
+            "rows": 1096,
+            "current": 4.04,
+            "percentile": 0.958
+          }
+        },
+        "filled_fields": [
+          "pb_lf",
+          "pb_percentile_3y",
+          "pe_percentile_3y",
+          "pe_ttm"
+        ],
+        "missing_fields_after": [
+          "roe_ttm",
+          "revenue_yoy",
+          "net_profit_yoy",
+          "announcements"
+        ]
+      }
+    ]
+  }
+}

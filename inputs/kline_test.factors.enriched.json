@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-04-20",
+  "task_type": "market_scan",
+  "universe": {
+    "market": "A股",
+    "sector": null,
+    "symbols": [
+      "600900.SH",
+      "300750.SZ"
+    ],
+    "filters": {
+      "test": true
+    }
+  },
+  "data_sources": [
+    "manual_test_input",
+    "akshare.stock_zh_a_hist"
+  ],
+  "market_view": "AkShare K 线补充脚本测试输入。 已尝试使用 AkShare 补充 K 线趋势因子，调用方式参考 a-stock-quant 的 history_fetcher.py，未使用 sqlite 缓存；成功 0 只，失败 2 只。",
+  "style_bias": [
+    "kline_test"
+  ],
+  "stocks": [
+    {
+      "symbol": "600900.SH",
+      "name": "长江电力",
+      "industry": "",
+      "factors": {},
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      }
+    },
+    {
+      "symbol": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "",
+      "factors": {},
+      "events": [],
+      "risk_flags": [],
+      "data_quality": {
+        "missing_fields": [
+          "ma20",
+          "ma60",
+          "akshare_kline"
+        ],
+        "quality_score": 0.48
+      }
+    }
+  ]
+}
