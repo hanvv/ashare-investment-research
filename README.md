@@ -19,15 +19,65 @@
 - 报告输出：生成结构化 JSON、Markdown 报告和可本地打开的 HTML 报告。
 - 数据缺口显式记录：拿不到的数据写入 `data_quality.missing_fields`，不使用默认值补造。
 
-## 安装
+## 安装 / 启用 Skill
 
-建议使用 Python 3.9+。脚本只依赖标准库和少量可选数据包，AkShare 相关增强需要安装 `akshare` 和 `pandas`。
+这是一个 Codex skill，不是普通 Python 包。Codex 发现 skill 的方式是读取 `$CODEX_HOME/skills/<skill-name>/SKILL.md`。本项目的 skill 名称是：
+
+```text
+ashare-investment-research
+```
+
+### 方式一：放入 Codex skills 目录
+
+将整个目录放到 Codex skills 目录下：
+
+```text
+$CODEX_HOME/skills/ashare-investment-research
+```
+
+如果没有设置 `CODEX_HOME`，通常使用：
+
+```text
+~/.codex/skills/ashare-investment-research
+```
+
+在 Windows 上，本机当前安装路径示例是：
+
+```text
+C:\Users\vv\.codex\skills\ashare-investment-research
+```
+
+目录内必须保留：
+
+```text
+ashare-investment-research/
+├── SKILL.md
+├── agents/
+├── references/
+└── scripts/
+```
+
+安装后，向 Codex 提出 A 股全市场扫描、单股诊断、自选股跟踪、公告事件补充、报告生成等请求时，会触发这个 skill。
+
+### 方式二：通过 skill-installer 安装
+
+如果你使用 Codex 的 `skill-installer` 工作流，可以让 Codex 从仓库或本地目录安装到 `$CODEX_HOME/skills`。安装完成后确认目录名仍为：
+
+```text
+ashare-investment-research
+```
+
+### 脚本运行依赖
+
+skill 本身的触发不需要 `pip install`。只有在运行 bundled scripts 抓取和增强数据时，才需要 Python 依赖。
+
+建议使用 Python 3.9+。AkShare 相关脚本需要：
 
 ```powershell
 py -m pip install akshare pandas
 ```
 
-如果网络受限，可以使用国内镜像：
+网络受限时可以使用国内镜像：
 
 ```powershell
 py -m pip install akshare pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -35,7 +85,36 @@ py -m pip install akshare pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## 用法
 
-### 最小闭环
+### 在 Codex 中使用
+
+安装到 skills 目录后，不需要手动 import 或执行入口命令。直接向 Codex 提出 A 股研究任务即可，Codex 会在匹配到任务时读取 `SKILL.md`，再按需调用 `scripts/` 和 `references/`。
+
+示例请求：
+
+```text
+用 ashare-investment-research 做一次 A 股全市场盘后扫描，剔除 ST，最小成交额 10 亿元，输出 Top 30，补充当前价格和近 90 天公告事件，生成 Markdown 和 HTML 报告。
+```
+
+```text
+诊断 300750.SZ 宁德时代，补充 K 线、估值、基本面、当前价和公告事件，给出研究评级、核心理由、风险、失效条件和数据缺口。
+```
+
+```text
+跟踪我的自选股：002475.SZ、300308.SZ、601138.SH。更新当前价格和公告事件，指出评级变化和需要优先复盘的股票。
+```
+
+```text
+基于现有 outputs/market_scan_20260420_uzi_fv_quote_events.signal.json 重新生成 HTML 报告，并让公告事件来源显示为可点击链接。
+```
+
+Codex 执行时应遵守两个原则：
+
+- 先获取或读取真实数据，再写结构化 JSON，最后从 JSON 生成报告。
+- 不能只运行脚本后结束；需要检查关键结果、说明数据来源、缺口、风险和生成文件。
+
+### 手动脚本闭环
+
+如果你要调试脚本、复现实验结果，或在 Codex 外部运行，可以使用下面的命令。
 
 已有因子文件时，直接评分、校验并生成报告：
 
@@ -46,7 +125,7 @@ py scripts/generate_report.py outputs/{task_id}.signal.json outputs/{task_id}.re
 py scripts/generate_html_report.py outputs/{task_id}.signal.json outputs/{task_id}.report.html
 ```
 
-### 全市场扫描示例
+### 手动全市场扫描示例
 
 使用腾讯行情备源做全市场流动性初筛，默认剔除 ST/退市字样股票，并按成交额优先选出候选池：
 
